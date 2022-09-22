@@ -270,6 +270,113 @@
         }
     }
 }
+.footer{
+    width: 100%;
+    height: auto;
+    float: left;
+    .footer_area{
+        width: 100%;
+        height: 720px;
+        float: left;
+        .img_area{
+            width: 100%;
+            height: 450px;
+            float: left;
+            background-color: aqua;
+        }
+        .footer_nav_area{
+            width: 100%;
+            height: 270px;
+            float: left;
+            background-color: #eff;
+            .footer_nav{
+                width: 1770px;
+                height: 170px;
+                float: left;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                &>.list{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    display: flex;
+                    justify-content: space-between;
+                    &>.item{
+                        width: auto;
+                        height: auto;
+                        float: left;
+                        &.customer{
+                            width:155px;
+                        }
+                        &.account{
+                            width:145px;
+                        }
+                        &.return{
+                            width: 240px;
+                        }
+                        &.info{
+                            width: 615px;
+                        }
+                        &.menu{
+                            width: 95px;
+                        }
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 1;
+                            margin-bottom: 15px;
+                        }
+                        &>.stress_txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 1;
+                            margin-bottom: 10px;
+                        }
+                        &>.txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 12px;
+                            line-height: 1;
+                            margin-bottom: 10px;
+                            &.copy{
+                                color: #ccc;
+                            }
+                            &>.red{
+                                color: #f39d9d;
+                            }
+                        }
+                        &>.btn_area{
+                            width: auto;
+                            height: 35px;
+                            float: left;
+                            padding: 10px;
+                            border: 1px solid #ccc;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            &>.btn_txt{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                line-height: 1;
+                                font-size: 12px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .index{
     width: 100%;
     height: auto;

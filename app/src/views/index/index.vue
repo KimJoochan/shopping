@@ -1,15 +1,17 @@
 <template>
   <div class="index">
     <Header/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 export default {
     name:"indexView",
     components:{
-        Header:Header
+        Header,Footer
     }
 }
 </script>
