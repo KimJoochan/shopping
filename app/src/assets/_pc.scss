@@ -290,7 +290,9 @@
             float: left;
             background-color: #eff;
             .footer_nav{
-                width: 1770px;
+                //width: 1770px;
+                //pc의 반응형 처리 해야 함
+                width: 92.1875%;
                 height: 170px;
                 float: left;
                 position: relative;
@@ -377,8 +379,4142 @@
         }
     }
 }
+.items_list{
+    &_three{
+        width: 1400px;
+        height: auto;
+        float: left;
+        &>.list{
+            width: 100%;
+            height: auto;
+            float: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &>.item{
+                width: 450px;
+                height: auto;
+                min-height: 100px;
+                background-color: #eff;
+                float: left;
+                margin-bottom: 60px;
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+                &>.img_area{
+                    width: 100%;
+                    height: 450px;
+                    float: left;
+                    background-color: #eee;
+                }
+                &>.txt_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 20px;
+                    &>.list{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.item{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-bottom: 10px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            &>.name{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                font-size: 14px;
+                                line-height: 1;
+                            }
+                            &>.price_area{
+                                width: 100%;
+                                height: 20px;
+                                float: left;
+                                &>.seller{
+                                    width: auto;
+                                    height: 20px;
+                                    line-height: 2.4;
+                                    font-size: 12px;
+                                    float: left;
+                                }
+                                &>.origin{
+                                    width: auto;
+                                    height: 20px;
+                                    line-height: 2.4;
+                                    font-size: 12px;
+                                    text-decoration: line-through;
+                                    float: left;
+                                    margin-left: 10px;
+                                }
+                                &>.percent{
+                                    width: auto;
+                                    height: auto;
+                                    line-height: 20px;
+                                    font-size: 16px;
+                                    color: #f39d9d;
+                                    float: right;
+                                }
+                            }
+                            &>.desc_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 12px;                                            
+                                    color: #ccc;
+                                }
+                            }
+                            &>.color_options_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.list{
+                                    width: 100%;
+                                    height: 10px;
+                                    float: left;
+                                    &>.item{
+                                        width: 10px;
+                                        height: 10px;
+                                        background-color: #f39d9d;
+                                        border-radius: 50%;
+                                        float: left;
+                                        margin-right: 10px;
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &>.marks_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.list{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.item{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        padding: 0 5px;
+                                        box-sizing: border-box;
+                                        &.one{
+                                            background-color: cyan
+                                        }
+                                        &.two{
+                                            background-color: chartreuse
+                                        }
+                                        &.three{
+                                            background-color: saddlebrown
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            color: #fff;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_four{
+        width: 1400px;
+        height: auto;
+        float: left;
+        &>.list{
+            width: 100%;
+            height: auto;
+            float: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &>.item{
+                width: 335px;
+                height: auto;
+                min-height: 100px;
+                background-color: #eff;
+                float: left;
+                margin-bottom: 60px;
+                &:nth-child(4n){
+                    margin-right: 0;
+                }
+                &>.img_area{
+                    width: 100%;
+                    height: 340px;
+                    float: left;
+                    background-color: #eee;
+                }
+                &>.txt_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 20px;
+                    &>.list{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.item{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-bottom: 10px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            &>.name{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                font-size: 14px;
+                                line-height: 1;
+                            }
+                            &>.price_area{
+                                width: 100%;
+                                height: 20px;
+                                float: left;
+                                &>.seller{
+                                    width: auto;
+                                    height: 20px;
+                                    line-height: 2.4;
+                                    font-size: 12px;
+                                    float: left;
+                                }
+                                &>.origin{
+                                    width: auto;
+                                    height: 20px;
+                                    line-height: 2.4;
+                                    font-size: 12px;
+                                    text-decoration: line-through;
+                                    float: left;
+                                    margin-left: 10px;
+                                }
+                                &>.percent{
+                                    width: auto;
+                                    height: auto;
+                                    line-height: 20px;
+                                    font-size: 16px;
+                                    color: #f39d9d;
+                                    float: right;
+                                }
+                            }
+                            &>.desc_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 12px;                                            
+                                    color: #ccc;
+                                }
+                            }
+                            &>.color_options_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.list{
+                                    width: 100%;
+                                    height: 10px;
+                                    float: left;
+                                    &>.item{
+                                        width: 10px;
+                                        height: 10px;
+                                        background-color: #f39d9d;
+                                        border-radius: 50%;
+                                        float: left;
+                                        margin-right: 10px;
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &>.marks_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.list{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.item{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        padding: 0 5px;
+                                        box-sizing: border-box;
+                                        &.one{
+                                            background-color: cyan
+                                        }
+                                        &.two{
+                                            background-color: chartreuse
+                                        }
+                                        &.three{
+                                            background-color: saddlebrown
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            color: #fff;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .index{
     width: 100%;
     height: auto;
     float: left;
+    .pc{
+        background-color: beige;
+        .img_banner{
+            width: 100%;
+            height: 675px;
+            float: left;
+            background-color: #f39d9d;
+            .pagi_area{
+                width: 60px;
+                height: 15px;
+                float: left;
+                background-color: aqua;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .main_banner{
+            width: 100%;
+            height: 520px;
+            float: left;
+            .center_pos{
+                width: 1400px;
+                height: 370px;
+                float: left;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                &>.list{
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    &>.item{
+                        width: 335px;
+                        height: 100%;
+                        float: left;
+                        margin-right: 20px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &>.img_area{
+                            width: 100%;
+                            height: 300px;
+                            float: left;
+                            background-color: saddlebrown;
+                        }
+                        &>.txt_area{
+                            width: 100%;
+                            height: 70px;
+                            float: left;
+                            padding: 10px 0;
+                            box-sizing: border-box;
+                            &>.tit{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                line-height: 30px;
+                                font-size: 14px;
+                            }
+                            &>.sub{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                line-height: 20px;
+                                font-size: 12px;
+                                color: #ccc;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .item_list_area{
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+            float: left;
+            .inner_area{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-bottom: 60px;
+                box-sizing: border-box;
+                .tit_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 110px;
+                    &>.tit{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        font-size: 24px;
+                        text-align: center;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                    }
+                    &>.sub{
+                        width: 30%;
+                        height: auto;
+                        float: left;
+                        font-size: 16px;
+                        color: #ccc;
+                        text-align: center;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .segment_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.list{
+                        width: auto;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.item{
+                            width: auto;
+                            height: 35px;
+                            float: left;
+                            padding: 10px 20px;
+                            box-sizing: border-box;
+                            border-radius: 17.5px;
+                            background-color: #eee;
+                            margin-right: 10px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                            &.on{
+                                background-color: #f39d9d;
+                                &>.txt{
+                                    color: #eee;
+                                }
+                            }
+                            &>.txt{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                line-height: 15px;
+                                font-size: 14px;
+                                color: #333;
+                            }
+                        }
+    
+                    }
+                }
+            }
+            &>.category_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                .categpry_banner_area{
+                    width: 100%;
+                    height: 520px;
+                    float: left;
+                    margin-top: 50px;
+                    &>.banner_btn{
+                        width: 45px;
+                        height: 100%;
+                        float: left;
+                        &>.icon{
+                            width: 45px;
+                            height: 45px;
+                            float: left;
+                            background-color: #f39d9d;
+                            position: relative;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        
+                    }
+                    &>.banner_mask{
+                        width: 1300px;
+                        height: 100%;
+                        float: left;
+                        &>.list{
+                            width: auto;
+                            height: 100%;
+                            float: left;
+                            &>.ban_item{
+                                width: 1300px;
+                                height: 100%;
+                                float: left;
+                                &>.left_img{
+                                    width: 520px;
+                                    height: 100%;
+                                    float: left;
+                                    background-color: cadetblue;
+                                    margin-right: 20px;
+                                }
+                                &>.right_img{
+                                    width: 760px;
+                                    height: 100%;
+                                    float: left;
+                                    &>.list{
+                                        width: 100%;
+                                        height: 240px;
+                                        float: left;
+                                        &.top{
+                                            margin-bottom: 40px;
+                                        }
+                                        &>.item{
+                                            width: 240px;
+                                            height: 240px;
+                                            float: left;
+                                            background-color: antiquewhite;
+                                            margin-right: 20px;
+                                            &:last-child{
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &>.new_item_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                .tit_area{
+                    margin-bottom: 50px;
+                }
+            }
+            &>.best_item_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                .tit_area{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+.list_view{
+    width: 100%;
+    height: auto;
+    float: left;
+    .pc{
+        background-color: beige;
+        .item_list_area{
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+            float: left;
+            &>.section_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                .inner_area{
+                    width: 1400px;
+                    height: auto;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding-bottom: 60px;
+                    box-sizing: border-box;
+                    .tit_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 110px;
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 24px;
+                            text-align: center;
+                            line-height: 1;
+                            margin-bottom: 10px;
+                        }
+                        &>.sub{
+                            width: 30%;
+                            height: auto;
+                            float: left;
+                            font-size: 16px;
+                            color: #ccc;
+                            text-align: center;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .segment_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                        &>.list{
+                            width: auto;
+                            height: auto;
+                            float: left;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            &>.item{
+                                width: auto;
+                                height: 35px;
+                                float: left;
+                                padding: 10px 20px;
+                                box-sizing: border-box;
+                                border-radius: 17.5px;
+                                background-color: #eee;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &.on{
+                                    background-color: #f39d9d;
+                                    &>.txt{
+                                        color: #eee;
+                                    }
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 15px;
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+                            }
+        
+                        }
+                    }
+                    &>.item_align_area{
+                        width: 100%;
+                        height: 15px;
+                        float: left;
+                        margin-bottom: 30px;
+                        &>.total_area{
+                            width: auto;
+                            height: 15px;
+                            float: left;
+                            &>.txt{
+                                width: auto;
+                                height: 15px;
+                                float: left;
+                                line-height: 15px;
+                                font-size: 14px;
+                            }
+                        }
+                        &>.alignment{
+                            width: auto;
+                            height: auto;
+                            float: right;
+                            &>.list{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                &>.item{
+                                    width: auto;
+                                    height: 15px;
+                                    float: left;
+                                    margin-right: 15px;
+                                    position: relative;
+                                    &:last-child{
+                                        margin-right: 0;
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }
+                                    &::after{
+                                        content: "/";
+                                        clear: both;
+                                        display: block;
+                                        width: auto;
+                                        height: 15px;
+                                        font-size: 12px;
+                                        float: left;
+                                        position:absolute;
+                                        top: 0;
+                                        left: calc(100% + 7px);
+                                        color: #ccc;
+                                    }
+                                    &>.txt{
+                                        width: auto;
+                                        height: 15px;
+                                        float: left;
+                                        font-size: 12px;
+                                        line-height: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pagi_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 80px;
+                        &>.pagi_list{
+                            width: auto;
+                            height: 30px;
+                            float: left;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            &>.item{
+                                width: 30px;
+                                height: 30px;
+                                float: left;
+                                margin-right: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 50%;
+                                box-sizing: border-box;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &.on{
+                                    background-color: #ccc;
+                                    &>.txt{
+                                        color: #fff;
+                                    }
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 12px;
+                                    line-height: 1;
+                                    color: #333;
+                                    position: relative;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+.info_view{
+    width: 100%;
+    height: auto;
+    float: left;
+    &>.pc{
+        .gs_info{
+            width: 100%;
+            height: 575px; 
+            float: left;
+            background-color: #eee;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-bottom: 15px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                    
+                }
+                &>.info_area{
+                    width: 1150px;
+                    height: 470px;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &>.img_area{
+                        width: 470px;
+                        height: 470px;
+                        float: left;
+                        background-color: antiquewhite;
+                    }
+                    &>.info_txt_area{
+                        width: 460px;
+                        height: 470px;
+                        float: right;
+                        &>.gs_name_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            border-bottom: 1px solid #ccc;
+                            box-sizing: border-box;
+                            &>.tit{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                font-size: 26px;
+                                line-height: 1;
+                                padding: 10px 0;
+                                box-sizing: border-box;
+                            }
+                        }
+                        &>.gs_tb_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #ccc;
+                            box-sizing: border-box;
+                            &>.gs_tb{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                colgroup{
+                                    .col1{
+                                        width: 60px;
+                                    }
+                                    .col2{
+                                        width: 345px;
+                                    }
+                                }
+                                tbody{
+                                    tr{
+                                        .col1{
+                                            padding-top: 10px;
+                                            vertical-align: top;
+                                            .txt{
+                                                width: 100%;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        .col2{
+                                            padding-top: 10px;
+                                            .line_txt{
+                                                width: 100%;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                                text-decoration: line-through;
+                                            }
+                                            .sale_price{
+                                                width: auto;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                            }
+                                            .sale_txt{
+                                                width: auto;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                                color: #f39d9d;
+                                            }
+                                            .deadline_txt{
+                                                width: 100%;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                                color: #9da1f3;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &>.gs_cnt_controll_area{
+                            width: 100%;
+                            height: 45px;
+                            float: left;
+                            padding: 10px 0;
+                            border-bottom: 1px solid #ccc;
+                            box-sizing: border-box;
+                            display: flex;
+                            justify-content: space-between;
+                            &>.name_area{
+                                width: 200px;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 25px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    font-size: 12px;
+                                }
+                            }
+                            &>.count_area{
+                                width: 55px;
+                                height: 25px;
+                                float: left;
+                                &>.cnt{
+                                    width: 35px;
+                                    height: 25px;
+                                    float: left;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        clear: both;
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        float: left;
+                                        border: 1px solid #ccc;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 25px;
+                                        font-size: 12px;
+                                        padding-left: 5px;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: 20px;
+                                    height: 25px;
+                                    float: left;
+                                    &>.btn{
+                                        width: 100%;
+                                        height: 12.5px;
+                                        float: left;
+                                        position: relative;
+                                        &::after{
+                                            content: "";
+                                            clear: both;
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            float: left;
+                                            border: 1px solid #ccc;
+                                            box-sizing: border-box;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+                                        &.up{
+
+                                        }
+                                        &.down{
+
+                                        }
+                                    }
+                                }
+                            }
+                            &>.price_area{
+                                width: 120px;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 25px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        &>.total_price_area{
+                            width: 100%;
+                            height: 75px;
+                            float: left;
+                            padding-top: 25px;
+                            padding-bottom: 20px;
+                            border-bottom: 1px solid #ccc;
+                            box-sizing: border-box;
+                            &>.txt_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: auto;
+                                    height: 24px;
+                                    float: left;
+                                    line-height: 2.5;
+                                    font-size: 12px;
+                                }
+                                &>.price{
+                                    width: auto;
+                                    height: 24px;
+                                    float: left;
+                                    line-height: 24px;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    margin: 0 10px;
+                                }
+                            }
+                        }
+                        &>.btn_list_area{
+                            width: 100%;
+                            height: 60px;
+                            float: left;
+                            margin-top: 35px;
+                            display: flex;
+                            justify-content:space-between;
+                            &>.btn{
+                                height: 100%;
+                                float: left;
+                                background-color: #ccc;
+                                &.wish_btn{
+                                    width: 80px;
+                                }
+                                &.cart_btn{
+                                    width: 80px;
+                                }
+                                &.buy_btn{
+                                    width: 275px;
+                                }
+                                &>.icon{
+                                    width: 30px;
+                                    height: 30px;
+                                    float: left;
+                                    position: relative;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    background-color: #9da1f3;
+                                }
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    text-align: center;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                        &>.gs_comment_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-top: 20px;
+                            &>.tit{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                            &>.txt{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 12px;
+
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2; // 원하는 라인수
+                                -webkit-box-orient: vertical
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section{
+            width: 100%;
+            height: auto;
+            float: left;
+            padding-top: 90px;
+            padding-bottom: 75px;
+            box-sizing: border-box;
+            &>.segment_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                &>.segment_list{
+                    width: 455px;
+                    height: auto;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    justify-content: space-between;
+                    &>.item{
+                        width: auto;
+                        height: 40px;
+                        float: left;
+                        &.on{
+                            position: relative;
+                            &>.txt{
+                                font-weight: 500;
+                            }
+                            &::after{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 2px;
+                                background-color: #333;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+                        &>.txt{
+                            width:auto;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+            &.detail_area{
+                &>.desc_area{
+                    width: 905px;
+                    height: auto;
+                    min-height: 600px;
+                    margin-top: 60px;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #efefef;
+                }
+            }
+            &.guide_area{
+                &>.table_area{
+                    width: 1135px;
+                    height: auto;
+                    min-height: 600px;
+                    float: left;
+                    margin-top: 60px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #ccc;
+                }
+            }
+            &.with_item_area{
+                &>.txt_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 60px;
+                    &>.txt_center{
+                        width: auto;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 16px;
+                        }
+                        &>.sub{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #ccc;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                &>.list_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 40px;
+                    &>.list{
+                        width: 1300px;
+                        height: auto;
+                        float: left;
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.item{
+                            width: 260px;
+                            height: auto;
+                            float: left;
+                            &>.img_area{
+                                width: 260px;
+                                height: 260px;
+                                float: left;
+                                background-color: #f39d9d;
+                            }
+                            &>.name{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                font-size: 12px;
+                                margin-top: 15px;
+                                margin-bottom: 10px;
+                            }
+                            &>.price_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.origin_txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 1;
+                                    text-decoration: line-through;
+                                    font-size: 14px;
+                                    margin-right: 10px;
+                                }
+                                &>.seller_txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 1;
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            &.review_area{
+                &>.txt_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 60px;
+                    &>.txt_center{
+                        width: auto;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 16px;
+                        }
+                        &>.sub{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #ccc;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+            &.qna_area{
+                &>.txt_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 60px;
+                    &>.txt_center{
+                        width: auto;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 16px;
+                        }
+                        &>.sub{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 1;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #ccc;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+            &>.table_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                margin-top: 30px;
+                &>.table_inner{
+                    width: 1400px;
+                    height: auto;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &>.empty{
+                        width: 100%;
+                        height: 55px;
+                        float: left;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        &>.txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 55px;
+                        }
+                    }
+                    &>.tb{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        colgroup{
+                            .col1{
+                                width: 100px;
+                            }
+                            .col2{
+                                width: 100px;
+                            }
+                            .col4{
+                                width: 100px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                height: 40px;
+                                td{
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    &.col1{
+                                        .txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &.col2{
+                                        .txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &.col3{
+                                        .txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            padding: 10px 20px;
+                                            box-sizing: border-box;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &.col4{
+                                        .txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &>.btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: auto;
+                            height: auto;
+                            float: right;
+                            &>.item{
+                                width: auto;
+                                height: 30px;
+                                float: left;
+                                padding: 0 10px;
+                                border: 1px solid #333;
+                                box-sizing: border-box;
+                                &.write{
+                                    background-color: #333;
+                                    margin-right: 10px;
+                                    &>.txt{
+                                        color: #ccc;
+                                    }
+                                }
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    color: #333;
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.cart_view{
+    &>.pc{
+        .gs_cart{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.tit_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                }
+                &>.cart_list_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 40px;
+                    &>.segment_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        background-color: #efefef;
+                        margin-bottom: 20px;
+                        &>.list{
+                            width: 100%;
+                            height: 40px;
+                            float: left;
+                            border-bottom: 1px solid #333;
+                            box-sizing: border-box;
+                            &>.item{
+                                width: 120px;
+                                height: 39px;
+                                float: left;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                &.on{
+                                    height: 40px;
+                                    border: 1px solid #333;
+                                    background-color: #fff;
+                                    border-bottom: #fff;
+                                    &>.txt{
+                                        color: #333;
+                                    }
+                                }
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    color: #999;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    &>.table_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-bottom: 30px;
+                        &>.tb_top{
+                            width: 100%;
+                            height: 40px;
+                            float: left;
+                            background-color: #eee;
+                            &>.list{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                &>.item{
+                                    width: auto;
+                                    height: 40px;
+                                    float: left;
+                                    &>.txt{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 40px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                        &>.tb_inner{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>table{
+                                width: 100%;
+                                height: auto;
+                                border-collapse: collapse;
+                                float: left;
+                                colgroup{
+                                    .col1{
+                                        width: 30px;
+                                    }
+                                    .col2{
+                                        width: 140px;
+                                    }
+                                    .col3{
+                                        width: 80px;
+                                    }
+                                    .col4{
+                                        width: 100px;
+                                    }
+                                }
+                                tbody{
+                                    tr{
+                                        &.tr_head{
+                                            height: 40px;
+                                            &>td{
+                                                border-bottom: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                                &>.all_chk{
+                                                    position: relative;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                }
+                                                &>.txt{
+                                                    text-align: center;
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                        &.tr_body{
+                                            height: 120px;
+                                            padding: 10px 0;
+                                            box-sizing: border-box;
+                                            &>td{
+                                                border-bottom: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                                vertical-align: middle;
+                                                &>.thumb{
+                                                    width: 100px;
+                                                    height: 100px;
+                                                    float: left;
+                                                    background-color: #9da1f3;
+                                                    position: relative;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                }
+                                                &>.txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    font-size: 14px;
+                                                    padding-left: 10px;
+                                                    box-sizing: border-box;
+                                                }
+                                                &>.count_area{
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    float: left;
+                                                    position: relative;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    &>.cnt_area{
+                                                        width: 100%;
+                                                        height: 40px;
+                                                        float: left;
+                                                        border: 1px solid #ccc;
+                                                        box-sizing: border-box;
+                                                        margin-bottom: 10px;
+                                                        &>.cnt_txt{
+                                                            width: 50px;
+                                                            height: 100%;
+                                                            float: left;
+                                                            &>.txt{
+                                                                width: 100%;
+                                                                height: auto;
+                                                                float: left;
+                                                                position: relative;
+                                                                top: 50%;
+                                                                transform: translateY(-50%);
+                                                                font-size: 10px;
+                                                                padding-left: 10px;
+                                                                box-sizing: border-box;
+                                                            }
+                                                        }
+                                                        &>.cnt_btn{
+                                                            width: 28px;
+                                                            height: 100%;
+                                                            float: left;
+                                                            &>.btn_arr{
+                                                                width: 100%;
+                                                                height: 50%;
+                                                                float: left;
+                                                                border: 1px solid #ccc;
+                                                                border-right: 0;
+                                                                border-top: 0;
+                                                                box-sizing: border-box;
+                                                                &:last-child{
+                                                                    border-bottom: 0;
+                                                                }
+                                                            }
+                                                        }
+
+                                                    }
+                                                    &>.btn_area{
+                                                        width: 80%;
+                                                        height: 30px;
+                                                        float: left;
+                                                        position: relative;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        border: 1px solid #ccc;
+                                                        box-sizing: border-box;
+                                                        &>.txt{
+                                                            width: 100%;
+                                                            height: auto;
+                                                            float: left;
+                                                            text-align: center;
+                                                            font-size: 12px;
+                                                            line-height: 30px;
+                                                        }
+                                                    }
+                                                }
+                                                &>.cent_txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    text-align: center;
+                                                    float: left;
+                                                    font-size: 14px;
+                                                }
+                                                &>.btn_list_area{
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    float: left;
+                                                    position: relative;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    &>.list{
+                                                        width: 100%;
+                                                        height: auto;
+                                                        float: left;
+                                                        &>.item{
+                                                            width: 100%;
+                                                            height: 25px;
+                                                            float: left;
+                                                            margin-bottom: 2.5px;
+                                                            border: 1px solid #333;
+                                                            box-sizing: border-box;
+                                                            cursor: pointer;
+                                                            &.on{
+                                                                background-color: #333;
+                                                                &>.txt_area{
+                                                                    &>.txt{
+                                                                        color: #fff;
+                                                                    }
+                                                                }
+                                                            }
+                                                            &:last-child{
+                                                                margin-bottom: 0;
+                                                            }
+                                                            &>.txt_area{
+                                                                width: auto;
+                                                                height: auto;
+                                                                float: left;
+                                                                position: relative;
+                                                                left: 50%;
+                                                                top: 50%;
+                                                                transform: translate(-50%,-50%);
+                                                                &>.icon{
+                                                                    width: 12px;
+                                                                    height: 12px;
+                                                                    float: left;
+                                                                    background-color: #333;
+                                                                    margin-right: 5px;
+                                                                }
+                                                                &>.txt{
+                                                                    width: auto;
+                                                                    height: auto;
+                                                                    float: left;
+                                                                    font-size: 12px;
+                                                                    color: #333;
+                                                                    line-height: 1;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &>.tb_bottom{
+                            width: 100%;
+                            height: 60px;
+                            float: left;
+                            background-color: #efefef;
+                            box-sizing: border-box;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #efefef;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                            &>.left_txt{
+                                width: auto;
+                                height: 100%;
+                                float: left;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 60px;
+                                    font-size: 12px;
+                                }
+                            }
+                            &>.right_txt{
+                                width: auto;
+                                height: 100%;
+                                float: right;
+                                padding-right: 10px;
+                                box-sizing: border-box;
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 60px;
+                                    font-size: 12px;
+                                    color: #666;
+                                    margin-right: 10px;
+                                }
+                                &>.total_txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 60px;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: #333;
+                                }
+                            }
+                        }
+                        &>.tb_notice{
+                            width: 100%;
+                            height: 35px;
+                            float: left;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #ccc;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                            &>.list{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                &>.item{
+                                    width: auto;
+                                    height: 35px;
+                                    float: left;
+                                    &>.icon{
+                                        width: 35px;
+                                        height: 35px;
+                                        float: left;
+                                        background-color: #9da1f3;
+                                        margin-right: 15px;
+                                    }
+                                    &>.txt{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 35px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                        &>.tb_btn_area{
+                            width: 100%;
+                            height: 35px;
+                            float: left;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #ccc;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                            &>.list{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                                &>.item{
+                                    width: auto;
+                                    height: 35px;
+                                    float: left;
+                                    &>.txt{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 35px;
+                                        font-size: 14px;
+                                    }
+                                    &>.btn_area{
+                                        width: auto;
+                                        height: 25px;
+                                        margin-left: 20px;
+                                        position: relative;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        float: left;
+                                        &>.btn{
+                                            width: auto;
+                                            height: 25px;
+                                            float: left;
+                                            padding: 0 20px;
+                                            border: 1px solid #666;
+                                            box-sizing: border-box;
+                                            margin-right: 30px;
+                                            cursor: pointer;
+                                            &:last-child{
+                                                margin-right: 0;
+                                            }
+                                            &.on{
+                                                background-color: #666;
+                                                &>.txt{
+                                                    color: #fff;
+                                                }
+                                            }
+                                            &>.txt{
+                                                width: auto;
+                                                height: auto;
+                                                float: left;
+                                                line-height: 25px;
+                                                color: #666;
+                                                font-size: 14px;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &>.tb_total_calc_area{
+                            width: 100%;
+                            height: 60px;
+                            float: left;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #333;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                            &>.list{
+                                width: 100%;
+                                height: 60px;
+                                float: left;
+                                &>.item{
+                                    width: 200px;
+                                    height: 60px;
+                                    float: left;
+                                    &>.txt{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        position: relative;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        font-size: 20px;
+                                        font-weight: 500;
+                                        color: #333;
+                                    }
+                                }
+                                &>.item2{
+                                    width: calc(100% - 400px);
+                                    height: 60px;
+                                    float: left;
+                                    &>.txt{
+                                        width: auto;
+                                        height: auto;
+                                        float: left;
+                                        position: relative;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        font-size: 20px;
+                                        font-weight: 500;
+                                        color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.cart_btn_area{
+                    width: 100%;
+                    height: 45px;
+                    float: left;
+                    margin-top: 30px;
+                    position: relative;
+                    &>.cent_btn{
+                        width: auto;
+                        height: 45px;
+                        float: left;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &>.list{
+                            width: auto;
+                            height: 45px;
+                            float: left;
+                            &>.item{
+                                width: 120px;
+                                height: 45px;
+                                float: left;
+                                background-color: #333;
+                                cursor: pointer;
+                                position: relative;
+                                &::after{
+                                    content: "";
+                                    clear: both;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    float: left;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    border: 1px solid #333;
+                                    box-sizing: border-box;
+
+                                }
+                                &.on{
+                                    margin-right: 15px;
+                                    background-color: #666;
+                                }
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 45px;
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 14px;
+                                }
+
+                            }
+                        }
+                    }
+                    &>.continue_btn{
+                        width: 120px;
+                        height: 45px;
+                        float: left;
+                        border: 1px solid #333;
+                        box-sizing: border-box;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        cursor: pointer;
+                        &>.txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 43px;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #333;
+                        }
+                    }
+                }
+                &>.use_info_tb{
+                    width: 100%;
+                    height: 350px;
+                    float: left;
+                    margin-top: 60px;
+                    background-color: #eff;
+                    margin-bottom: 120px;
+                    border: 1px solid #333;
+                    box-sizing: border-box;
+                    &>.tit_area{
+                        width: 100%;
+                        height: 35px;
+                        float: left;
+                        background-color: #efefef;
+                        &>.txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            padding: 0 15px;
+                            box-sizing: border-box;
+                            line-height: 35px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.login_view{
+    &>.pc{
+        &>.login_inner{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.login_form_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 60px;
+                    margin-bottom: 60px;
+                    &>.inner_form_area{
+                        width: 635px;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 45px;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        &>.inner_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.txt_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 16px;
+
+                                }
+                            }
+                            &>.form_area{
+                                width: 100%;
+                                height: 80px;
+                                float: left;
+                                margin-top: 15px;
+                                &>.input_area{
+                                    width: 435px;
+                                    height: 100%;
+                                    float: left;
+                                    &>.input{
+                                        width: 100%;
+                                        height: 35px;
+                                        float: left;
+                                        border: 1px solid #333;
+                                        box-sizing: border-box;
+                                        margin-bottom: 10px;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: 85px;
+                                    height: 100%;
+                                    float: right;
+                                    background-color: #333;
+                                    cursor: pointer;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 80px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            &>.line{
+                                width: 100%;
+                                height: 1px;
+                                float: left;
+                                background-color: #333;
+                                margin-top: 30px;
+                                margin-bottom: 30px;
+                            }
+                            &>.search_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.list{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.item{
+                                        width: auto;
+                                        height: 15px;
+                                        float: left;
+                                        margin-right: 30px;
+                                        cursor: pointer;
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 15px;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            &>.join_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-top: 45px;
+                                &>.txt_area{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.tit{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        font-size: 16px;
+                                    }
+                                    &>.sub_txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        font-size: 12px;
+                                        color: #333;
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: 100%;
+                                    height: 55px;
+                                    float: left;
+                                    background-color: burlywood;
+                                    margin-top: 15px;
+                                    cursor: pointer;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        line-height: 55px;
+                                        float: left;
+                                        color: #fff;
+                                        font-size: 14px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            &>.no_user_buy_area{
+                                width: 100%;
+                                height: 30px;
+                                float: left;
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    color: #666;
+                                }
+                                &>.buy_btn{
+                                    width: 90px;
+                                    height: 30px;
+                                    float: right;
+                                    background-color: #333;
+                                    cursor: pointer;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 30px;
+                                        font-size: 12px;
+                                        color: #ccc;
+                                        text-align: center;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+                &>.nologin_form_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-bottom: 60px;
+                    &>.inner_form_area{
+                        width: 635px;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 45px;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        &>.inner_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.txt_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 16px;
+                                }
+                                &>.sub_txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+                            }
+                            &>.form_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-top: 30px;
+                                &>.user_input{
+                                    width: 100%;
+                                    height: 30px;
+                                    float: left;
+                                    margin-top: 15px;
+                                    &>.txt_area{
+                                        width: 120px;
+                                        height: 30px;
+                                        float: left;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 30px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &>.input_area{
+                                        width: calc(100% - 120px);
+                                        height: 30px;
+                                        border: 1px solid #ccc;
+                                        box-sizing: border-box;
+                                        float: left;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: 100%;
+                                            float: left;
+                                            border: none;
+                                            padding: 10px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: 100%;
+                                    height: 40px;
+                                    float: left;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    margin-top: 30px;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        text-align: center;
+                                        position: relative;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        font-size: 14px;
+                                        color: #666;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+.join_view{
+    &>.pc{
+        &>.join_inner{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.join_form_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 20px;
+                    margin-bottom: 60px;
+                    &>.inner_form_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.inner_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.tit_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    text-align: center;
+                                    font-size: 24px;
+                                }
+                            }
+                            &>.form_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                border: 1px solid #666;
+                                border-left: 0;
+                                border-right: 0;
+                                box-sizing: border-box;
+                                &>.form_tb_area{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    table{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        border-collapse: collapse;
+                                        colgroup{
+                                            .col1{
+                                                width: 150px;
+                                            }
+                                        }
+                                        tbody{
+                                            tr{
+                                                height: 40px;
+                                                td{
+                                                    padding-left: 10px;
+                                                    box-sizing: border-box;
+                                                }
+                                                &>.col1{
+                                                    background-color: #eee;
+                                                    &>.col1_inner{
+                                                        width: 100%;
+                                                        height: auto;
+                                                        float: left;
+                                                        &.needs{
+                                                            &>.txt{
+                                                                position: relative;
+                                                                &::after{
+                                                                    content: "";
+                                                                    clear: both;
+                                                                    position: absolute;
+                                                                    top: calc(100% - 7.5px);
+                                                                    right: -7.5px;
+                                                                    width: 5px;
+                                                                    height: 5px;
+                                                                    background-color: #0000ff;
+                                                                }
+                                                            }
+                                                        }
+                                                        &>.txt{
+                                                            width: auto;
+                                                            height: auto;
+                                                            float: left;
+                                                            font-size: 12px;
+                                                            color: #666;
+                                                        }
+                                                    }
+                                                }
+                                                &>.col2{
+                                                    padding: 10px;
+                                                    box-sizing: border-box;
+                                                    &>.col2_inner{
+                                                        width: 100%;
+                                                        height: 20px;
+                                                        float: left;
+                                                        &>.input_area{
+                                                            width: 140px;
+                                                            height: 100%;
+                                                            float: left;
+                                                            border: 1px solid #ccc;
+                                                            box-sizing: border-box;
+                                                            &>input{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                float: left;
+                                                                border: none;
+                                                                padding: 5px;
+                                                                box-sizing: border-box;
+                                                            }
+                                                        }
+                                                        &>.input_txt{
+                                                            width: auto;
+                                                            height: 20px;
+                                                            float: left;
+                                                            margin-left: 10px;
+                                                            &>.txt{
+                                                                width: auto;
+                                                                height: auto;
+                                                                float: left;
+                                                                line-height: 20px;
+                                                                font-size: 12px;
+                                                                color: #ccc;
+                                                            }
+                                                        }
+                                                        &>.input_phone_area{
+                                                            width: auto;
+                                                            height: 100%;
+                                                            float: left;
+                                                            &>.hypen{
+                                                                width: 20px;
+                                                                height: auto;
+                                                                line-height: 20px;
+                                                                float: left;
+                                                                font-size: 10px;
+                                                                text-align: center;
+                                                            }
+                                                            &>.phone_input{
+                                                                width: 100px;
+                                                                height: 100%;
+                                                                float: left;
+                                                                border: 1px solid #ccc;
+                                                                box-sizing: border-box;
+                                                                &>select,&>input{
+                                                                    width: 100%;
+                                                                    height: 100%;
+                                                                    float: left;
+                                                                    border: none;
+                                                                    padding-left: 10px;
+                                                                    box-sizing: border-box;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &>.agree_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-top: 60px;
+                                &>.tit{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 20px;
+                                }
+                                &>.agree_inner_area{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.all_btn_area{
+                                        width: 100%;
+                                        height: 65px;
+                                        float: left;
+                                        padding: 20px;
+                                        box-sizing: border-box;
+                                        background-color: #eee;
+                                        position: relative;
+                                        &::after{
+                                            content: "";
+                                            clear: both;
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            float: left;
+                                            position:absolute;
+                                            top: 0;
+                                            left: 0;
+                                            border: 1px solid #bbb;
+                                            box-sizing: border-box;
+                                        }
+                                        &>.all_btn_inner{
+                                            width: 100%;
+                                            height: 25px;
+                                            float: left;
+                                            &>.chk_area{
+                                                width: 25px;
+                                                height: 25px;
+                                                float: left;
+                                                border: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                                margin-right: 20px;
+                                                &>input{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    float: left;
+                                                    border: none;
+                                                }
+                                            }
+                                            &>.txt_area{
+                                                width: calc(100% - 45px);
+                                                height: 25px;
+                                                float: left;
+                                                &>.txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 25px;
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &>.section_area{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        padding: 20px;
+                                        box-sizing: border-box;
+                                        background-color: #eee;
+                                        position: relative;
+                                        &::after{
+                                            content: "";
+                                            clear: both;
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            float: left;
+                                            position:absolute;
+                                            top: 0;
+                                            left: 0;
+                                            border: 1px solid #bbb;
+                                            border-top: none;
+                                            box-sizing: border-box;
+                                        }
+                                        &>.tit_txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 1;
+                                            font-size: 14px;
+                                        }
+                                        &>.desc_area{
+                                            width: 100%;
+                                            height: 150px;
+                                            float: left;
+                                            margin-top: 15px;
+                                            overflow-y: scroll;
+                                            background-color: #fff;
+                                            border: 1px solid #ccc;
+                                            box-sizing: border-box;
+                                        }
+                                        &>.chk_area{
+                                            width: 100%;
+                                            height: 15px;
+                                            float: left;
+                                            margin-top: 15px;
+                                            &>.chk_txt{
+                                                width: auto;
+                                                height: auto;
+                                                float: left;
+                                                &>.txt{
+                                                    width: auto;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 15px;
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                            &>.chk_input{
+                                                width: auto;
+                                                height: 15px;
+                                                float: left;
+                                                margin-left: 10px;
+                                                &>input{
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    float: left;
+                                                }
+                                                &>.label{
+                                                    width: auto;
+                                                    height: auto;
+                                                    line-height: 15px;
+                                                    float: left;
+                                                    font-size: 12px;
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    margin-top: 30px;
+                                    &>.btn{
+                                        width: 120px;
+                                        height: 40px;
+                                        float: left;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        background-color: #333;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            line-height: 40px;
+                                            font-size: 14px;
+                                            color: #fff;
+                                        }
+                                    }
+    
+                                }
+                            }
+                            &>.line{
+                                width: 100%;
+                                height: 1px;
+                                float: left;
+                                background-color: #ccc;
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.find_info_view{
+    &>.pc{
+        .find_view{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.tit_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                    &>.sub_txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 15px;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #666;
+                    }
+                }
+                &>.form_outer_area{
+                    width: 100%;
+                    height: 385px;
+                    float: left;
+                    position: relative;;
+                    margin-top: 30px;
+                    margin-bottom: 120px;
+                    &::before{
+                        content: "";
+                        clear: both;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        float: left;
+                        border: 1px solid #333;
+                        box-sizing: border-box;
+                        position:absolute;
+                        top: 0;
+                        left: 0;
+
+                    }
+                    &>.inner_form_area{
+                        width: 400px;
+                        height: auto;
+                        float: left;
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        &>.txt_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.txt{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                text-align: center;
+                                font-size: 20px;
+                                line-height: 1;
+                            }
+                        }
+                        &>.user_info{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-top: 30px;
+                            &>.user_theme{
+                                width: 100%;
+                                height: 60px;
+                                float: left;
+                                &>.top{
+                                    width: 100%;
+                                    height: 30px;
+                                    float: left;
+                                    &>.top_txt_area{
+                                        width: 120px;
+                                        height: 30px;
+                                        float: left;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 30px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &>.top_select_area{
+                                        width: calc(100% - 120px);
+                                        height: 30px;
+                                        float: left;
+                                        &>select{
+                                            width: 100%;
+                                            height: 100%;
+                                            float: left;
+                                        }
+                                    }
+                                }
+                                &>.bot{
+                                    width: 100%;
+                                    height: 30px;
+                                    float: left;
+                                    &>.radio_area{
+                                        width: calc(100% - 120px);
+                                        height: 30px;
+                                        float: right;
+                                        &>.radio_input{
+                                            width: auto;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 15px;
+                                            &:last-child{
+                                                margin-right: 0;
+                                            }
+                                            &>.radio{
+                                                width: auto;
+                                                height: 30px;
+                                                float: left;
+                                            }
+                                            &>.txt{
+                                                width: auto;
+                                                height: auto;
+                                                float: left;
+                                                line-height: 30px;
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &>.user_input{
+                                width: 100%;
+                                height: 30px;
+                                float: left;
+                                margin-top: 15px;
+                                &>.txt_area{
+                                    width: 120px;
+                                    height: 30px;
+                                    float: left;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 30px;
+                                        font-size: 12px;
+                                    }
+                                }
+                                &>.input_area{
+                                    width: calc(100% - 120px);
+                                    height: 30px;
+                                    border: 1px solid #333;
+                                    box-sizing: border-box;
+                                    float: left;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: 100%;
+                                        float: left;
+                                        border: none;
+                                        padding: 10px;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                            }
+                        }
+                        &>.btn_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            background-color: #333;
+                            margin-top: 40px;
+                            &>.txt{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                line-height: 40px;
+                                color: #fff;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.order_view{
+    width: 100%;
+    height: auto;
+    float: left;
+    &>.inner_area{
+        max-width: 1100px;
+        width: 100%;
+        height: auto;
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        &::after{
+            content: "";
+            clear: both;
+            display: block;
+            width: 100%;
+            height: 100%;
+            float: left;
+            position: absolute;
+            left: 0;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            z-index: -1;
+        }
+        &>.header{
+            width: 100%;
+            height: 60px;
+            float: left;
+            position: relative;
+            &>.back_btn{
+                width: 60px;
+                height: 60px;
+                float: left;
+                background-color: #9da1f3;
+            }
+            &>.logo{
+                width: auto;
+                height: auto;
+                float: left;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 20px;
+            }
+        }
+        &>.tit_area{
+            width: 100%;
+            height: auto;
+            float: left;
+            background-color: #333;
+            &>.tit{
+                width: 100%;
+                height: auto;
+                float: left;
+                text-align: center;
+                font-size: 20px;
+                color: #fff;
+                line-height: 60px;
+            }
+        }
+        &>.columns{
+            width: 100%;
+            height: auto;
+            float: left;
+            &>.clip_btn_area{
+                width: 100%;
+                height: 60px;
+                float: left;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                box-sizing: border-box;
+                &>.icon{
+                    width: 40px;
+                    height: 40px;
+                    float: left;
+                    background-color: #bbb;
+                    margin-right: 15px;
+                }
+                &>.txt{
+                    width: auto;
+                    height: 100%;
+                    float: left;
+                    line-height: 40px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                &>.btn_icon{
+                    width: 40px;
+                    height: 40px;
+                    float: right;
+                    background-color: #9da1f3;
+                }
+            }
+            &>.clip_form_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                box-sizing: border-box;
+                &>.inner{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    .tb_form{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        colgroup{
+                            .col1{
+                                width: 100px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                height: 40px;
+                                td{
+                                    padding: 5px 0;
+                                }
+                                .col1{
+                                    .col1_txt{
+                                        &.needs{
+                                            &>.txt{
+                                                position: relative;
+                                                &::after{
+                                                    content: "";
+                                                    clear: both;
+                                                    display: block;
+                                                    width: 5px;
+                                                    height: 5px;
+                                                    position: absolute;
+                                                    top: calc(100% - 17.5px);
+                                                    right: -7.5px;
+                                                    background-color: #0000ff;
+                                                }
+                                            }
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 40px;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                .col2{
+                                    &>.input_area{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        &>.ful_input{
+                                            width: 100%;
+                                            height: 40px;
+                                            float: left;
+                                            border: 1px solid #ccc;
+                                            box-sizing: border-box;
+                                            margin-bottom: 10px;
+                                            &:last-child{
+                                                margin-bottom: 0;
+                                            }
+                                            &>select,&>input{
+                                                width: 100%;
+                                                height: 100%;
+                                                float: left;
+                                                border: none;
+                                                padding: 0 10px;
+                                                box-sizing: border-box;
+                                            }
+                                        }
+                                        &>.input_btn_area{
+                                            width: 100%;
+                                            height: 40px;
+                                            float: left;
+                                            margin-bottom: 10px;
+                                            &>.inner_input{
+                                                width: 120px;
+                                                height: 100%;
+                                                float: left;
+                                                border: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                            }
+                                            &>.inner_btn{
+                                                width: 120px;
+                                                height: 100%;
+                                                float: left;
+                                                border: 1px solid #ccc;
+                                                background-color: #ddd;
+                                                box-sizing: border-box;
+                                                margin-left: 15px;
+                                                &>.txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    text-align: center;
+                                                    line-height: 40px;
+                                                    font-size: 14px;
+                                                }
+                                            }
+
+
+                                        }
+                                        &>.three_input{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            &>.item{
+                                                width: 240px;
+                                                height: 40px;
+                                                float: left;
+                                                border: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                                &>select,&>input{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    float: left;
+                                                    border: none;
+                                                    padding-left: 10px;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+                                            &>.hypen{
+                                                width: 40px;
+                                                height: 40px;
+                                                float: left;
+                                                text-align: center;
+                                                font-size: 12px;
+                                                line-height: 40px;
+                                            }
+                                        }
+                                        &>.two_input{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            &>.item{
+                                                width: 300px;
+                                                height: 40px;
+                                                float: left;
+                                                border: 1px solid #ccc;
+                                                box-sizing: border-box;
+                                                &>select,&>input{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    float: left;
+                                                    border: none;
+                                                    padding-left: 10px;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+                                            &>.hypen{
+                                                width: 40px;
+                                                height: 40px;
+                                                float: left;
+                                                text-align: center;
+                                                font-size: 12px;
+                                                line-height: 40px;
+                                            }
+                                        }
+                                        &>.txt_area{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            margin-top: 10px;
+                                            &>.txt{
+                                                width: 100%;
+                                                height: auto;
+                                                float: left;
+                                                font-size: 12px;
+                                                color: #666;
+                                                line-height: 1.2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tb_gs_list{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        colgroup{
+                            .col1{
+                                width: 100px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                height: 100px;
+                                &>.thumb_area{
+                                    &>.img_area{
+                                        width: 100px;
+                                        height: 100px;
+                                        float: left;
+                                        background-color: #9da1f3;
+                                    }
+                                }
+                                &>.desc_area{
+                                    padding-left: 10px;
+                                    box-sizing: border-box;
+                                    &>.inner{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        &>.gs_name{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 1;
+                                            font-size: 16px;
+                                            margin-bottom: 10px;
+                                        }
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            font-size: 14px;
+                                        }
+
+                                    }
+
+                                }
+                                &>.btn_area{
+                                    position: relative;
+                                    &>.icon{
+                                        width: 24px;
+                                        height: 24px;
+                                        float: left;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        background-color: #9da1f3;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    .tb_gs_price{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-bottom: 15px;
+                                
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 15px;
+                                    font-size: 14px;
+                                }
+                                &>.price_txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: right;
+                                    line-height: 15px;
+                                    font-size: 14px;
+                                    color: #666;
+                                }
+                            }
+                        }
+                        &>.total_area{
+                            width: 100%;
+                            height: 45px;
+                            float: left;
+                            background-color: #9da1f3;
+                            border-radius: 5px;
+                            padding: 0 15px;
+                            box-sizing: border-box;
+                            &>.txt{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                line-height: 45px;
+                                font-size: 16px;
+                            }
+                            &>.price_txt{
+                                width: auto;
+                                height: auto;
+                                float: right;
+                                line-height: 45px;
+                                font-size: 14px;
+                                color: cyan;
+                            }
+                        }
+                    }
+                    .pay_method_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.pay_select_area{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-top: 25px;
+                            &>.inner_box{
+                                width: 1080px;
+                                height: auto;
+                                float: left;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                position: relative;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                &>.tit_area{
+                                    width: 100%;
+                                    height: 55px;
+                                    float: left;
+                                    background-color: #9da1f3;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 55px;
+                                        padding-left: 10px;
+                                        box-sizing: border-box;
+                                        font-size: 16px;
+                                    }
+                                }
+                                &>.radio_list_area{
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 10px;
+                                    box-sizing: border-box;
+                                    float: left;
+                                    &>.list{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        &>.item{
+                                            width: auto;
+                                            height: 30px;
+                                            float: left;
+                                            &>.input{
+                                                width: 30px;
+                                                height: 30px;
+                                                float: left;
+                                                &>input{
+                                                    width: auto;
+                                                    height: auto;
+                                                    float: left;
+                                                    position: relative;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%,-50%);
+                                                }
+                                            }
+                                            &>.label{
+                                                width: auto;
+                                                height: 30px;
+                                                float: left;
+                                                &>.txt{
+                                                    width: auto;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 30px;
+                                                    font-size: 12px;
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                    .check_list_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            box-sizing: border-box;
+                            &>.item{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-top: 10px;
+                                &:first-child{
+                                    margin-top: 0;
+                                }
+                                &>.list_item{
+                                    width: 100%;
+                                    height: 30px;
+                                    float: left;
+                                    border-bottom: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    &>.icon_area{
+                                        width: 20px;
+                                        height: 20px;
+                                        float: left;
+                                        background-color: #333;
+                                        margin-right: 10px;
+                                    }
+                                    &>.txt_area{
+                                        width: calc(100% - 60px);
+                                        height: 20px;
+                                        float: left;
+                                        &>.mark{
+                                            width: 100px;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 20px;
+                                            color: #0000ff;
+                                            font-size: 12px;
+                                            margin-right: 10px;
+                                        }
+                                        &>.txt{
+                                            width: calc(100% - 110px);
+                                            height: auto;
+                                            float: left;
+                                            line-height: 20px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    &>.right_arrow_area{
+                                        width: 30px;
+                                        height: 20px;
+                                        float: left;
+                                        background-color: #333;
+                                    }
+                                }
+                                &>.sub_txt{
+                                    width: 100%;
+                                    height: 150px;
+                                    float: left;
+                                    background-color: cyan;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &>.line{
+            width: 100%;
+            height: 10px;
+            float: left;
+            background-color: #666;
+        }
+        &>.footer{
+            width: 100%;
+            height: auto;
+            float: left;
+            padding: 10px;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+            background-color: #999;
+            &>.inner{
+                width: 100%;
+                height: auto;
+                float: left;
+                &>.submit_btn{
+                    width: 100%;
+                    height: 50px;
+                    float: left;
+                    background-color: #333;
+                    &>.txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        text-align: center;
+                        line-height: 50px;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+                &>.list_txt{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 15px;
+                    &>.txt_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-bottom: 10px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        &>.txt{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.board_list_view{
+    &>.pc{
+        .list_view{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.tit_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                    &>.sub_txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 15px;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #666;
+                    }
+                }
+                &>.no_thumnail_list_view{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    margin-bottom: 120px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        colgroup{
+                            .col1{
+                                width: 90px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                &.th{
+                                    height: 40px;
+                                    background-color: #eee;
+                                    &>td{
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                &.tr{
+                                    height: 60px;
+                                    border-bottom: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    &>td{
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                        &.title{
+                                            &>.in_title{
+                                                width: 1220px;
+                                                height: auto;
+                                                float: left;
+                                                &>.txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    white-space: nowrap;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                &>.thumnail_list_view{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    margin-bottom: 120px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        colgroup{
+                            .col1{
+                                width: 90px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                &.th{
+                                    height: 40px;
+                                    background-color: #eee;
+                                    &>td{
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                &.tr{
+                                    height: 90px;
+                                    border-bottom: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    &>td{
+                                        position: relative;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            font-size: 12px;
+                                        }
+                                        &>.thumbnail{
+                                            width: 59px;
+                                            height: 50px;
+                                            float: left;
+                                            position: relative;
+                                            left: 50%;
+                                            background-color: #666;
+                                            transform: translateX(-50%);
+                                        }
+                                        &.title{
+                                            .in_title{
+                                                width: 100%;
+                                                height: auto;
+                                                float: left;
+                                                &>.gs_name{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 1;
+                                                    font-size: 14px;
+                                                    margin-bottom: 5px;
+                                                }
+                                                &>.gs_review{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 1;
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                        }
+                                       
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}
+.board_read_view{
+    &>.pc{
+        .read_view{
+            width: 100%;
+            height: auto; 
+            float: left;
+            &>.inner{
+                width: 1400px;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                &>.flow_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: auto;
+                        height: auto;
+                        float:right;
+                        line-height: 15px;
+                        font-size: 12px;
+                    }
+                }
+                &>.tit_area{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-top: 30px;
+                    &>.txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                    &>.sub_txt{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 15px;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #666;
+                    }
+                }
+                &>.columns{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    margin-bottom: 120px;
+                    &>.gs_info_area{
+                        width: 100%;
+                        height: 140px;
+                        float: left;
+                        padding: 20px;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        &>.thumbnail{
+                            width: 100px;
+                            height: 100px;
+                            float: left;
+                            background-color: #9da1f3;
+                            margin-right: 20px;
+                        }
+                        &>.desc_area{
+                            width: calc(100% - 120px);
+                            height: 100px;
+                            float: left;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            &>.option_area{
+                                width: 100%;
+                                height: 15px;
+                                float: left;
+                                &>.list{
+                                    width: auto;
+                                    height: 15px;
+                                    float: left;
+                                    &>.item{
+                                        width: auto;
+                                        height: 15px;
+                                        float: left;
+                                        padding: 0 10px;
+                                        box-sizing: border-box;
+                                        &.one{
+                                            background-color: #0000ff;
+                                        }
+                                        &.two{
+                                            background-color: hotpink;
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: 15px;
+                                            float: left;
+                                            line-height: 15px;
+                                            font-size: 10px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            &>.info_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.gs_name{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 1.2;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    font-size: 12px;
+                                }
+                                &>.gs_price{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    margin-top: 5px;
+                                }
+                            }
+                            &>.line{
+                                width: 100%;
+                                height: 1px;
+                                float: left;
+                                background-color: #333;
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                            }
+                            &>.btn_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                &>.btn{
+                                    width: 90px;
+                                    height: 30px;
+                                    float: left;
+                                    background-color: #666;
+                                    &>.txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        font-size: 12px;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    &>.tb_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        border-top: 1px solid #ccc;
+                        box-sizing: border-box;
+                        table{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            border-collapse: collapse;
+                            colgroup{
+                                .col1{
+                                    width: 120px;
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    height: 40px;
+                                    border-bottom: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    td{
+                                        &.col1{
+                                            background-color: #eee;
+                                        }
+                                        &>.txt{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            font-size: 12px;
+                                            padding-left: 10px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &>.tb_desc{
+                        width: 100%;
+                        height: 450px;
+                        float: left;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        background-color: #efefef;
+                    }
+                    &>.btn_area{
+                        width: 100%;
+                        height: 30px;
+                        float: left;
+                        margin-top: 30px;
+                        &>.btn{
+                            width: 120px;
+                            height: 30px;
+                            float: left;
+                            border: 1px solid #999;
+                            box-sizing: border-box;
+                            &>.txt{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                font-size: 12px;
+                                position: relative;
+                                top: 50%;left: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                        }
+                    }
+                    &>.comment_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 30px;
+                        &>.empty{
+                            width: 100%;
+                            height: 60px;
+                            float: left;
+                            background-color: #999;
+                            &>.txt{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                line-height: 60px;
+                                font-size: 14px;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                    &>.next_prev_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 30px;
+                        border: 1px solid #999;
+                        border-bottom: 0;
+                        box-sizing: border-box;
+                        &>.section{
+                            width: 100%;
+                            height: 30px;
+                            float: left;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                clear: both;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                float: left;
+                                border-bottom: 1px solid #999;
+                                box-sizing: border-box;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            &>.txt_area{
+                                width: 130px;
+                                height: 30px;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                }
+                            }
+                            &>.desc_area{
+                                width: calc(100% - 130px);
+                                height: 30px;
+                                float: left;
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    padding-left: 10px;
+                                    box-sizing: border-box;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+              
+               
+            }
+        }
+    }
 }
