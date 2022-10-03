@@ -1,0 +1,247 @@
+@media all and (max-width:720px) {
+    .pc{
+        display: none;
+    }
+    .mb{
+        width: 100%;
+        height: auto;
+        float: left;
+        display: block;
+    }
+    .header{
+        width: 100%;
+        height: 100px;
+        float: left;
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: #333;
+        aside{
+            width: 100%;
+            height: 40px;
+            float: left;
+            background-color: antiquewhite;
+            &>.icon_area{
+                width: 40px;
+                height: 40px;
+                float: left;
+                background-color: #fff;
+            }
+            &>.recent_search{
+                width: 165px;
+                height: 100%;
+                float: left;
+                background-color: sandybrown;
+                .txt_area{
+                    width: 85px;
+                    height: auto;
+                    float: left;
+                    margin-left: 20px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: aqua;
+                    .txt_mask{
+                        width: 100%;
+                        height: 15px;
+                        float: left;
+                        position: relative;
+                        overflow: hidden;
+                        .txt_list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            position:absolute;
+                            top: 0;
+                            left: 0;
+                            &>.item{
+                                width: 100%;
+                                height: 15px;
+                                float: left;
+                                .txt_num{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 15px;
+                                    color: beige;
+                                    font-size: 12px;
+                                    margin-right: 10px;
+                                }
+                                .txt_text{
+                                    width: 60px;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 15px;
+                                    font-size: 12px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                 
+                }
+                .icon_area{
+                    width: 15px;
+                    height: 100%;
+                    float: right;
+                    background-color: aquamarine;
+                }
+            }
+        }
+        .inner_header{
+            width: 100%;
+            height: 60px;
+            float: left;
+            &>.inner{
+                width: 100%;
+                height: 20px;
+                float: left;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                &>.left_side{
+                    width: auto;
+                    height: 100%;
+                    float: left;
+                    &>.ham{
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        background-color: antiquewhite;
+                        margin-right: 10px;
+                    }
+                    &>.logo{
+                        width: 100px;
+                        height: 20px;
+                        float: left;
+                        background-color: aquamarine;
+                    }
+                }
+                &>.right_side{
+                    width: auto;
+                    height: 20px;
+                    float: right;
+                    &>.search_area{
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        background-color: wheat;
+                        margin-right: 10px;
+                    }
+                    &>.cart_icon{
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                        background-color: chartreuse;
+                    }
+
+                }
+            }
+
+        }
+    }
+    .footer{
+        width: 100%;
+        height: auto;
+        float: left;
+        .footer_area{
+            width: 100%;
+            height: auto;
+            float: left;
+            .img_area{
+                width: 100%;
+                height: 150px;
+                float: left;
+                background-color: aqua;
+            }
+            .footer_nav_area{
+                width: 100%;
+                height: auto;
+                float: left;
+                background-color: #eff;
+                .footer_nav_mb{
+                    width: 92.1875%;
+                    height: auto;
+                    float: left;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &>.list{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 15px 0;
+                        box-sizing: border-box;
+                        &>.item{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-bottom: 15px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            &>.tit{
+                                width: 120px;
+                                height: auto;
+                                float: left;
+                                font-size: 12px;
+                                font-weight: 500;
+                                margin-bottom: 15px;
+                            }
+                            &>.other_tit{
+                                width: calc(100% - 120px);
+                                height: auto;
+                                float: left;
+                                padding-left: 15px;
+                                box-sizing: border-box;
+                                &>.stress_txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    line-height: 1;
+                                    margin-bottom: 10px;
+                                }
+                                &>.txt{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    font-size: 12px;
+                                    line-height: 1;
+                                    margin-bottom: 10px;
+                                    &.copy{
+                                        color: #ccc;
+                                    }
+                                    &>.red{
+                                        color: #f39d9d;
+                                    }
+                                }
+                                &>.btn_area{
+                                    width: auto;
+                                    height: 30px;
+                                    float: left;
+                                    padding: 8px;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    background-color: #fff;
+                                    &>.btn_txt{
+                                        width: 100%;
+                                        height: auto;
+                                        float: left;
+                                        line-height: 1;
+                                        font-size: 12px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

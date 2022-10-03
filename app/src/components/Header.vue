@@ -93,6 +93,44 @@
                 </div>
             </nav>
         </div>
+        <div class="mb">
+            <aside>
+                <div class="icon_area">
+
+                </div>
+                <div class="recent_search">
+                    <div class="txt_area">
+                        <div class="txt_mask">
+                            <ul class="txt_list">
+                                <li class="item">
+                                    <p class="txt_num">1</p>
+                                    <p class="txt_text">Lorem</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="icon_area">
+
+                    </div>
+                </div> 
+            </aside>
+            <div class="inner_header">
+                <div class="inner">
+                    <div class="left_side">
+                        <div class="ham"></div>
+                        <div class="logo"></div>
+                    </div>
+                    <div class="right_side">
+                        <div class="search_area">
+
+                        </div>
+                        <div class="cart_icon">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
