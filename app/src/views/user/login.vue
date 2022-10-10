@@ -96,6 +96,116 @@
             </div>
         </div>
     </div>
+    <div class="mb">
+        <div class="login_inner">
+            <h2 class="tit">Login</h2>
+            <!-- 주문하기 클릭시 나오는 로그인 화면 -->
+            <div class="order_login_area" v-show="false">
+                <div class="login_form">
+                    <div class="input_area">
+                        <input type="text">
+                    </div>
+                    <div class="input_area">
+                        <input type="password">
+                    </div>
+                    <div class="btn_list_area">
+                        <div class="btn login">
+                            <p class="txt">로그인</p>
+                        </div>
+                        <!-- 비회원 구매시 나오는 비회원 구매 버튼 -->
+                        <div class="btn no_user">
+                            <p class="txt">비회원 구매</p>
+                        </div>
+                    </div>
+                    <div class="find_area">
+                        <div class="inner_center">
+                            <ul class="list">
+                                <li class="item">
+                                    <p class="txt">아이디 찾기</p>
+                                </li>
+                                <li class="item">
+                                    <p class="txt">비밀번호 찾기</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <h2 class="tit">NEW MEMBER</h2>
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                        <div class="bnt">
+                            <p class="txt">회원가입</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 주문조회시 나오는 로그인 화면  -->
+            <div class="order_select_login_area">
+                <div class="segment_area">
+                    <ul class="list">
+                        <li class="item on">
+                            <p class="txt">회원</p>
+                        </li>
+                        <li class="item">
+                            <p class="txt">비회원</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 회원일때 나오는 인풋 창 -->
+                <div class="input_list_area">
+                    <div class="input_area">
+                        <input type="text">
+                    </div>
+                    <div class="input_area">
+                        <input type="password">
+                    </div>
+                    <div class="btn_list_area">
+                        <div class="btn login">
+                            <p class="txt">로그인</p>
+                        </div>
+                    </div>
+                    <div class="find_area">
+                        <div class="inner_center">
+                            <ul class="list">
+                                <li class="item">
+                                    <p class="txt">아이디 찾기</p>
+                                </li>
+                                <li class="item">
+                                    <p class="txt">비밀번호 찾기</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="join_area">
+                        <h2 class="tit">NEW MEMBER</h2>
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                        <div class="bnt">
+                            <p class="txt">회원가입</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 비회원일때 나오는 인풋 창 -->
+                <div class="input_list_area" v-show="false">
+                    <div class="input_area">
+                        <input type="text">
+                    </div>
+                    <div class="input_area">
+                        <input type="text">
+                    </div>
+                    <div class="input_area">
+                        <input type="text">
+                    </div>
+                    <div class="btn_list_area">
+                        <div class="btn login">
+                            <p class="txt">조회</p>
+                        </div>
+                        <div class="btn join">
+                            <p class="txt">회원가입</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <Footer/>
   </div>
 </template>

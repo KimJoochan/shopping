@@ -109,7 +109,7 @@
                 <li class="item"></li>
               </ul>
             </div>
-            <div class="pagi_area">
+            <div class="pagi_area_num">
               <ul class="pagi_list">
                 <li class="item on">
                   <a class="txt" href="#">1</a>
@@ -125,6 +125,172 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="mb">
+      <div class="section">
+          <div class="tit_area">
+            <h2 class="tit">BOTTOM</h2>
+          </div>
+          <div class="segment_area">
+            <div class="inner">
+              <ul class="list">
+                <li class="item on">
+                  <p class="txt">OUITER</p>
+                </li>
+                <li class="item">
+                  <p class="txt">OUITER</p>
+                </li>
+                <li class="item">
+                  <p class="txt">OUITER</p>
+                </li>
+                <li class="item">
+                  <p class="txt">ACC</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="align_area">
+            <div class="align_select_area">
+              <select>
+                <option>정렬방식</option>
+              </select>
+            </div>
+            <div class="select_count_area">
+              <div class="icon"></div>
+              <div class="icon"></div>
+            </div>
+          </div>
+          <div class="list_items">
+            <ul class="list">
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                    <p class="sale">10,300원</p>
+                    <p class="percent">7%</p>
+                  </div>
+                  <div class="desc_area">
+                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
+                  </div>
+                  <div class="option_area">
+                    <ul class="list">
+                      <li class="item one"></li>
+                      <li class="item two"></li>
+                      <li class="item three"></li>
+                    </ul>
+                  </div>
+                  <div class="mark_list">
+                    <ul class="list">
+                      <li class="item one">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item two">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item three">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                    <p class="sale">10,300원</p>
+                    <p class="percent">7%</p>
+                  </div>
+                  <div class="desc_area">
+                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
+                  </div>
+                  <div class="option_area">
+                    <ul class="list">
+                      <li class="item one"></li>
+                      <li class="item two"></li>
+                      <li class="item three"></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                    <p class="sale">10,300원</p>
+                    <p class="percent">7%</p>
+                  </div>
+                  <div class="desc_area">
+                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                    <p class="sale">10,300원</p>
+                    <p class="percent">7%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="img_area">
+
+                </div>
+                <div class="txt_area">
+                  <p class="gs_name">Lorem</p>
+                  <div class="price_area">
+                    <p class="sell">9,300원</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="more_view_area">
+              <div class="inner_center">
+                <ul class="list">
+                  <li class="item">
+
+                  </li>
+                  <li class="item">
+                    
+                  </li>
+                  <li class="item">
+                    
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <Footer/>
   </div>

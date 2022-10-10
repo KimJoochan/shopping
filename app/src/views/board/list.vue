@@ -53,6 +53,19 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="pagi_area_num">
+                        <ul class="pagi_list">
+                            <li class="item on">
+                            <a class="txt" href="#">1</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">2</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">3</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="thumnail_list_view" v-show="false">
                     <table>
@@ -98,6 +111,110 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="pagi_area_num">
+                        <ul class="pagi_list">
+                            <li class="item on">
+                            <a class="txt" href="#">1</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">2</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search_box">
+                    <div class="select_box_area">
+                        <select>
+                            <option>제목</option>
+                        </select>
+                    </div>
+                    <div class="input_btn_area">
+                        <div class="input_area">
+                            <input type="text">
+                        </div>
+                        <div class="btn_area">
+                            <button class="btn">검색</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb">
+        <div class="list_view">
+            <div class="inner">
+                <div class="tit_area">
+                    <!-- 비밀번호 찾기 -->
+                    <h2 class="txt">Notice</h2>
+                    <p class="sub_txt">공지사항입니다</p>
+                    <!-- 아이디 찾기 -->
+                    <h2 class="txt" v-show="false">Review</h2>
+                    <p class="sub_txt" v-show="false">상품 사용후기입니다</p>
+                </div>
+                <div class="no_thumnail_list_view">
+                    <ul class="list">
+                        <li class="item">
+                            <h2 class="tit">Lorem, ipsum.</h2>
+                            <p class="sub_txt">Lorem ipsum dolor sit amet.</p>
+                        </li>
+                    </ul>
+                    <div class="pagi_area_num">
+                        <ul class="pagi_list">
+                            <li class="item on">
+                            <a class="txt" href="#">1</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">2</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="thumnail_list_view" v-show="false">
+                    <ul class="list">
+                        <li class="item">
+                            <div class="thumbnail_area">
+
+                            </div>
+                            <div class="desc_area">
+                                <h2 class="tit">Lorem, ipsum.</h2>
+                                <p class="sub_txt">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagi_area_num">
+                        <ul class="pagi_list">
+                            <li class="item on">
+                            <a class="txt" href="#">1</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">2</a>
+                            </li>
+                            <li class="item">
+                            <a class="txt" href="#">3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search_box">
+                    <div class="select_box_area">
+                        <select>
+                            <option>제목</option>
+                        </select>
+                    </div>
+                    <div class="input_btn_area">
+                        <div class="input_area">
+                            <input type="text">
+                        </div>
+                        <div class="btn_area">
+                            <button class="btn">검색</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

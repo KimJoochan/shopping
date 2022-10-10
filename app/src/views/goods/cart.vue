@@ -220,6 +220,151 @@
             </div>
         </div>
     </div>
+    <div class="mb">
+        <div class="gs_cart">
+            <div class="inner">
+                <div class="tit_area">
+                    <h2 class="txt">Shopping Cart</h2>
+                </div>
+                <div class="cart_list_area">
+                    <div class="segment_area">
+                        <ul class="list">
+                            <li class="item on">
+                                <a href="#" class="txt">국내배송상품(1)</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="txt">해외배송상품(1)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list_area">
+                        <div class="toggle_section">
+                            <div class="toggle_top">
+                                <p class="txt">장바구니 상품</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="section">
+                                <div class="tb_top">
+                                    <p class="txt">일반상품(1)</p>    
+                                </div>
+                                <ul class="list">
+                                    <li class="item">
+                                        <table>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr class="check">
+                                                    <td>
+                                                        <input type="checkbox" class="check_input">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="img_area">
+
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h2 class="gs_name">Lorem, ipsum.</h2>
+                                                        <p class="gs_txt">Lorem, ipsum.</p>
+                                                        <p class="gs_txt">-</p>
+                                                        <p class="gs_txt">Lorem, ipsum.</p>
+                                                        <p class="gs_txt">Lorem, <b class="bold">ipsum</b>sdfsdfdsf.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="count_area">
+                                                            <div class="cnt_btn">
+                                                                <p class="txt">-</p>
+                                                            </div>
+                                                            <div class="input_area">
+                                                                <p class="txt">2</p>
+                                                            </div>
+                                                            <div class="cnt_btn">
+                                                                <p class="txt">+</p>
+                                                            </div>
+                                                            <div class="adjust_btn">
+                                                                <p class="txt">적용</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                    <li class="item">
+                                        <div class="btn_area">
+                                            <div class="left_side">
+                                                <div class="btn">
+                                                    <p class="txt">삭제</p>
+                                                </div>
+                                                <div class="btn">
+                                                    <p class="txt">관심상품</p>
+                                                </div>
+                                            </div>
+                                            <div class="right_side">
+                                                 <div class="btn">
+                                                    <p class="txt">주문하기</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="toggle_section">
+                            <div class="toggle_top">
+                                <p class="txt">[기본배송]</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="section">
+                                <div class="btn_list_area">
+                                    <div class="inner_area">
+                                        <div class="btn_area">
+                                            <div class="btn">
+                                                <p class="txt">전체선택</p>
+                                            </div>
+                                            <div class="btn">
+                                                <p class="txt">산택삭제</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total_price_area">
+                            <div class="total_area">
+                                <h2 class="txt">결제예정금액</h2>
+                                <h2 class="price">12,500원</h2>
+                            </div>
+                            <div class="gs_price_area">
+                                <h2 class="txt">총 상품금액</h2>
+                                <h2 class="price">10,000원</h2>
+                            </div>
+                            <div class="gs_price_area">
+                                <h2 class="txt">총 배송비</h2>
+                                <h2 class="price">2,500원</h2>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <ul class="list">
+                                <li class="item">
+                                    <p class="txt">선택상품주문</p>
+                                </li>
+                                <li class="item on">
+                                    <p class="txt">잔체상품주문</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <Footer/>
   </div>
 </template>

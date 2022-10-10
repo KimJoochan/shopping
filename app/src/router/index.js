@@ -14,6 +14,9 @@ import joinView from '../views/user/join';
 import boardListView from '../views/board/list'
 import boardReadView from '../views/board/read'
 
+import AdminIndexView from '../views/admin/index'
+import AdminGsRegisterView from '../views/admin/gs_register'
+
 
 
 Vue.use(VueRouter)
@@ -68,7 +71,18 @@ const routes = [
     path : '/board_read',
     name:"boardReadView",
     component:boardReadView
-  }
+  },
+  {
+    path : '/admin',
+    name:"AdminIndexView",
+    component:AdminIndexView
+  },
+  {
+    path : '/admin/gs_register',
+    name:"AdminGsRegisterView",
+    component:AdminGsRegisterView
+  },
+  
   
   
 
