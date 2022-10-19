@@ -993,12 +993,14 @@
                             width: 100%;
                             height: 100%;
                             float: left;
+                            position: relative;
                             &>.ban_item{
                                 width: 1300px;
                                 height: 100%;
                                 float: left;
                                 display: flex;
                                 justify-content: space-between;
+                                position: absolute;
                                 &>.left_img{
                                     width: 520px;
                                     height: 100%;

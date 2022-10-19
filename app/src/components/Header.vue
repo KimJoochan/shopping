@@ -61,19 +61,19 @@
             <nav>
                 <div class="inner_nav">
                     <div class="left_area">
-                        <div class="logo" :style="{backgroundImage:'url('+$store.state.logo_obj['pc']['img_path']+')'}">
+                        <div class="logo" :style="{backgroundImage:'url('+$store.state.logo_obj['pc']['img_path']+')'}" v-on:click="goto_index_page()">
                         </div>
                     </div>
                     <div class="center_area">
                         <ul class="list">
                             <li class="item" v-for="item of $store.state.nav_list" v-bind:key="item.index">
                                 <div class="top_menu">
-                                    <p class="txt">{{item.top.nav_name}}</p>
+                                    <p class="txt" v-on:click="goto_gs_list(item.top.idx)">{{item.top.nav_name}}</p>
                                 </div>
                                 <div class="sub_menu" v-if="item.sub!=''">
                                     <ul class="list">
                                         <li class="item" v-for="item2 of item.sub" v-bind:key="item2.index">
-                                            <p class="txt">{{item2.nav_name}}</p>
+                                            <p class="txt" v-on:click="goto_gs_list(item2.idx)">{{item2.nav_name}}</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -116,8 +116,9 @@
             <div class="inner_header">
                 <div class="inner">
                     <div class="left_side">
-                        <div class="ham"></div>
-                        <div class="logo"></div>
+                        <div class="ham" v-on:click="mb_nav_open()"></div>
+                        <div class="logo" :style="{backgroundImage:'url('+$store.state.logo_obj['mb']['img_path']+')'}" v-on:click="goto_index_page()">
+                        </div>
                     </div>
                     <div class="right_side">
                         <div class="search_area">
@@ -129,12 +130,12 @@
                     </div>
                 </div>
             </div>
-            <div class="nav" v-show="false">
+            <div class="nav" v-show="mb_nav_show">
                 <div class="nav_header">
                     <div class="txt_area">
 
                     </div>
-                    <div class="btn_area">
+                    <div class="btn_area" v-on:click="mb_nav_open()">
 
                     </div>
                 </div>
@@ -219,38 +220,17 @@
                     </div>
                     <div class="list_nav">
                         <ul class="list">
-                            <li class="item">
+                            <li class="item" v-for="item of $store.state.nav_list" v-bind:key="item.index">
                                 <div class="txt_area">
-                                    <p class="txt">Lorem</p>
+                                    <p class="txt" v-on:click="goto_gs_list(item.top.idx)">{{item.top.nav_name}}</p>
                                     <div class="mark_area"></div>
                                 </div>
-                                <div class="sub_nav">
+                                <div class="sub_nav" v-if="item.sub!=''">
                                     <ul class="sub_list">
-                                        <li class="item">
-                                            <p class="txt">Lorem</p>
+                                        <li class="item" v-for="item2 of item.sub" v-bind:key="item2.index">
+                                            <p class="txt" v-on:click="goto_gs_list(item2.idx)">{{item2.nav_name}}</p>
                                         </li>
                                     </ul>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="txt_area">
-                                    <p class="txt">Lorem</p>
-                                    <div class="mark_area"></div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="txt_area">
-                                    <p class="txt">Lorem</p>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="txt_area">
-                                    <p class="txt">Lorem</p>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="txt_area">
-                                    <p class="txt">Lorem</p>
                                 </div>
                             </li>
                         </ul>
@@ -311,17 +291,8 @@
             </div>
             <div class="outer_nav" v-show="true">
                 <ul class="list">
-                    <li class="item">
-                        <p class="txt">F/W SEASON</p>
-                    </li>
-                    <li class="item">
-                        <p class="txt">NEW</p>
-                    </li>
-                    <li class="item">
-                        <p class="txt">OUTER</p>
-                    </li>
-                    <li class="item">
-                        <p class="txt">TOP</p>
+                    <li class="item" v-for="item of $store.state.mb_nav_list" v-bind:key="item.index">
+                        <p class="txt" v-on:click="goto_gs_list(item.idx)">{{item.nav_name}}</p>
                     </li>
                 </ul>
             </div>
@@ -331,7 +302,23 @@
 
 <script>
 export default {
-    name:"headerView"
+    name:"headerView",
+    data() {
+        return {
+            mb_nav_show:false
+        }
+    },
+    methods: {
+        mb_nav_open:function(){
+            this.mb_nav_show=!this.mb_nav_show;
+        },
+        goto_gs_list:function(idx){
+            this.$router.push('/list?idx='+idx);
+        },
+        goto_index_page:function(){
+            this.$router.push('/');
+        }
+    },
 }
 </script>
 

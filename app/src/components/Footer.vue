@@ -55,9 +55,7 @@
     </div>
     <div class="mb">
         <div class="footer_area">
-            <div class="img_area">
-
-            </div>
+            <div class="img_area" :style="{backgroundImage:'url('+$store.state.foot_obj['mb']['img_path']+')'}"></div>
             <div class="footer_nav_area">
                 <div class="footer_nav_mb">
                     <ul class="list">

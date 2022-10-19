@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     nav_list:{},
+    mb_nav_list:{},
     logo_obj:{
       pc:{
         img_path:""
@@ -35,6 +36,7 @@ export default new Vuex.Store({
   mutations: {
     init_data(state,value){
       state.nav_list=value['nav'];
+      state.mb_nav_list = value['mb_nav_list'];
       state.logo_obj=value['logo'];
       state.foot_obj=value['foot'];
     },
@@ -63,13 +65,16 @@ export default new Vuex.Store({
         success:function(res){
           const result = JSON.parse(res);
           let nav_list = result['data']['nav_list'];
+          let mb_nav_list = result['data']['mb_nav_list'];
           let logo_obj = result['data']['logo']
           let foot_obj = result['data']['foot']
           var obj = {
             nav:nav_list,
+            mb_nav_list:mb_nav_list,
             logo:logo_obj,
             foot:foot_obj
           };
+          console.log(obj);
           context.commit('init_data',obj);
         }
       })
