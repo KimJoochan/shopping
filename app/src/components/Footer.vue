@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="pc">
         <div class="footer_area">
-            <div class="img_area">
+            <div class="img_area" :style="{backgroundImage:'url('+$store.state.foot_obj['pc']['img_path']+')'}">
 
             </div>
             <div class="footer_nav_area">

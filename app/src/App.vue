@@ -7,6 +7,20 @@
     <router-view/>
   </div>
 </template>
+<script>
+  export default {
+      name:"indexView",
+      data() {
+        return {
+        
+        }
+      },
+      mounted() {
+        this.$store.dispatch('init_load');
+      },
+  }
+</script>
+
 
 <style lang="scss">
 

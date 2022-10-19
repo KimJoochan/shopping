@@ -16,6 +16,18 @@ import boardReadView from '../views/board/read'
 
 import AdminIndexView from '../views/admin/index'
 import AdminGsRegisterView from '../views/admin/gs_register'
+import AdminGsListView from '../views/admin/gs_list'
+import AdminUserAddView from '../views/admin/user_register'
+import AdminUserListdView from '../views/admin/user_list'
+
+import AdminBannerAddtdView from '../views/admin/banner_register'
+import AdminBannerListView from '../views/admin/banner_list'
+
+import AdminOrderListView from '../views/admin/order_list'
+
+import AdminCateRegisterView from '../views/admin/category_register'
+import AdminCateFlowEditView from '../views/admin/category_flow_edit'
+
 
 
 
@@ -82,6 +94,52 @@ const routes = [
     name:"AdminGsRegisterView",
     component:AdminGsRegisterView
   },
+  {
+    path : '/admin/gs_list',
+    name:"AdminGsListView",
+    component:AdminGsListView
+  },
+  {
+    path : '/admin/user_register',
+    name:"AdminUserAddView",
+    component:AdminUserAddView
+  },
+  {
+    path : '/admin/user_list',
+    name:"AdminUserListdView",
+    component:AdminUserListdView
+  },
+  {
+    path : '/admin/banner_register',
+    name:"AdminBannerAddtdView",
+    component:AdminBannerAddtdView
+  },
+  {
+    path : '/admin/banner_list',
+    name:"AdminBannerListtdView",
+    component:AdminBannerListView
+  },
+  {
+    path : '/admin/order_list',
+    name:"AdminOrderListdView",
+    component:AdminOrderListView
+  },
+  {
+    path : '/admin/category_register',
+    name:"AdminCateRegisterdView",
+    component:AdminCateRegisterView
+  },
+  {
+    path : '/admin/category_flow_edit',
+    name:"AdminCateFlowEditView",
+    component:AdminCateFlowEditView
+  },
+  
+  
+  
+  
+  
+  
   
   
   

@@ -199,6 +199,7 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            z-index: 9;
             .left_area{
                 width: auto;
                 height: 100%;
@@ -207,7 +208,10 @@
                     width: 115px;
                     height: 100%;
                     float: left;
-                    background-color: aquamarine;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-color: #efefef;
                 }
             }
             .center_area{
@@ -228,6 +232,7 @@
                         height: auto;
                         float: left;
                         position: relative;
+                        cursor: pointer;
                         .top_menu{
                             width: auto;
                             height: 40px;
@@ -242,6 +247,11 @@
                                 font-size: 12px;
                             }
                         }
+                        &:hover{
+                            &>.sub_menu{
+                                display: block;
+                            }
+                        }
                         .sub_menu{
                             width: 100%;
                             height: auto;
@@ -249,10 +259,11 @@
                             position:absolute;
                             top: 100%;
                             left: 0;
-                            border-radius: 10px;
                             padding: 10px 0;
+                            border-radius: 10px;
                             box-sizing: border-box;
                             background-color: gainsboro;
+                            display: none;
                             &>.list{
                                 width: 100%;
                                 height: auto;
@@ -447,6 +458,9 @@
                 background-color: #eff;
                 float: left;
                 margin-bottom: 60px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
                 &:nth-child(3n){
                     margin-right: 0;
                 }
@@ -599,6 +613,9 @@
                 background-color: #eff;
                 float: left;
                 margin-bottom: 60px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
                 &:nth-child(4n){
                     margin-right: 0;
                 }
@@ -739,27 +756,64 @@
     height: auto;
     float: left;
     .pc{
-        background-color: beige;
         .img_banner{
             width: 100%;
             height: 675px;
             float: left;
-            background-color: #f39d9d;
-            .pagi_area{
-                width: 60px;
-                height: 15px;
+            background-color: #efefef;
+            position: relative;
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;        
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &>.banner_empty{
+                width: 100%;
+                height: 100%;
                 float: left;
-                background-color: aqua;
-                position: absolute;
-                bottom: 30px;
-                left: 50%;
-                transform: translateX(-50%);
+                &>.txt{
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    text-align: center;
+                    position: relative;
+                    top: 50%;
+                    font-size: 20px;
+                    transform: translateY(-50%);
+                }
+
             }
         }
         .main_banner{
             width: 100%;
             height: 520px;
             float: left;
+            background-color: #ececec;
             .center_pos{
                 width: 1400px;
                 height: 370px;
@@ -772,11 +826,12 @@
                     width: 100%;
                     height: 100%;
                     float: left;
+                    display: flex;
+                    justify-content: space-around;
                     &>.item{
                         width: 335px;
                         height: 100%;
                         float: left;
-                        margin-right: 20px;
                         &:last-child{
                             margin-right: 0;
                         }
@@ -784,7 +839,10 @@
                             width: 100%;
                             height: 300px;
                             float: left;
-                            background-color: saddlebrown;
+                            background-color: #fff;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
                         }
                         &>.txt_area{
                             width: 100%;
@@ -909,7 +967,7 @@
                 float: left;
                 .categpry_banner_area{
                     width: 100%;
-                    height: 520px;
+                    height: auto;
                     float: left;
                     margin-top: 50px;
                     &>.banner_btn{
@@ -929,22 +987,26 @@
                     }
                     &>.banner_mask{
                         width: 1300px;
-                        height: 100%;
+                        height: 520px;
                         float: left;
                         &>.list{
-                            width: auto;
+                            width: 100%;
                             height: 100%;
                             float: left;
                             &>.ban_item{
                                 width: 1300px;
                                 height: 100%;
                                 float: left;
+                                display: flex;
+                                justify-content: space-between;
                                 &>.left_img{
                                     width: 520px;
                                     height: 100%;
                                     float: left;
                                     background-color: cadetblue;
-                                    margin-right: 20px;
+                                    background-position: center;
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
                                 }
                                 &>.right_img{
                                     width: 760px;
@@ -952,20 +1014,21 @@
                                     float: left;
                                     &>.list{
                                         width: 100%;
-                                        height: 240px;
+                                        height: auto;
                                         float: left;
-                                        &.top{
-                                            margin-bottom: 40px;
-                                        }
+                                        display: flex;
+                                        justify-content: space-around;
+                                        flex-wrap: wrap;
                                         &>.item{
                                             width: 240px;
                                             height: 240px;
                                             float: left;
                                             background-color: antiquewhite;
-                                            margin-right: 20px;
-                                            &:last-child{
-                                                margin-right: 0;
-                                            }
+                                            margin-top: 7.5px;
+                                            margin-bottom: 7.5px;
+                                            background-position: center;
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
                                         }
                                     }
                                 }

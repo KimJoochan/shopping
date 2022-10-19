@@ -61,20 +61,19 @@
             <nav>
                 <div class="inner_nav">
                     <div class="left_area">
-                        <div class="logo">
-
+                        <div class="logo" :style="{backgroundImage:'url('+$store.state.logo_obj['pc']['img_path']+')'}">
                         </div>
                     </div>
                     <div class="center_area">
                         <ul class="list">
-                            <li class="item" v-for="item in 5" v-bind:key="item.index">
+                            <li class="item" v-for="item of $store.state.nav_list" v-bind:key="item.index">
                                 <div class="top_menu">
-                                    <p class="txt">Lorem</p>
+                                    <p class="txt">{{item.top.nav_name}}</p>
                                 </div>
-                                <div class="sub_menu" v-show="false">
+                                <div class="sub_menu" v-if="item.sub!=''">
                                     <ul class="list">
-                                        <li class="item">
-                                            <p class="txt">Lorem</p>
+                                        <li class="item" v-for="item2 of item.sub" v-bind:key="item2.index">
+                                            <p class="txt">{{item2.nav_name}}</p>
                                         </li>
                                     </ul>
                                 </div>

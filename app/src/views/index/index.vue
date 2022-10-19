@@ -3,127 +3,78 @@
     <Header/>
     <div class="pc">
       <div class="img_banner">
-        <div class="pagi_area">
+        <!-- Slider main container -->
+        <div class="swiper pc_swiper" v-show="$store.state.index_page_data.pc_banner.length!=0">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="item of $store.state.index_page_data.pc_banner" v-bind:key="item.index" :style="{backgroundImage:'url('+item+')'}"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+        <div class="banner_empty" v-show="$store.state.index_page_data.pc_banner.length==0"><p class="txt">배너 데이터가 없음</p></div>
       </div>
       <div class="main_banner">
         <div class="center_pos">
           <ul class="list">
-            <li class="item">
-              <div class="img_area"></div>
+            <li class="item" v-for="item of $store.state.index_page_data.display_pc" v-bind:key="item.index" v-show="item.title.length>0 || item.sub.length>0">
+              <div class="img_area" :style="{backgroundImage:'url('+item['img_path']+')'}"></div>
               <div class="txt_area">
-                <p class="tit">Knit</p>
-                <p class="sub">Lorem, ipsum dolor.</p>
-              </div>
-            </li>
-            <li class="item">
-              <div class="img_area"></div>
-              <div class="txt_area">
-                <p class="tit">Beauty</p>
-                <p class="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, illo!</p>
-              </div>
-            </li>
-            <li class="item">
-              <div class="img_area"></div>
-              <div class="txt_area">
-                <p class="tit">Acc</p>
-                <p class="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, illo!</p>
-              </div>
-            </li>
-            <li class="item">
-              <div class="img_area"></div>
-              <div class="txt_area">
-                <p class="tit">Photo Review</p>
-                <p class="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, illo!</p>
+                <p class="tit">{{item['title']}}</p>
+                <p class="sub">{{item['sub']}}</p>
               </div>
             </li>
           </ul>
         </div>
       </div>
       <div class="item_list_area">
-        <div class="category_area">
+        <div :class="[item.theme==1?'category_area':'new_item_area']" v-for="item of $store.state.index_page_data.display_nav_list" v-bind:key="item.index">
           <div class="inner_area">
             <div class="tit_area">
-              <h2 class="tit">Category Best Item</h2>
+              <h2 class="tit">{{item.nav_name}}</h2>
               <p class="sub">Lorem, ipsum dolor.</p>
             </div>
-            <div class="segment_area">
+            <div class="segment_area" v-if="item.sub_nav.length>1">
               <ul class="list">
-                <li class="item">
-                  <p class="txt">OUTER</p>
-                </li>
-                <li class="item">
-                  <p class="txt">TOP</p>
-                </li>
-                <li class="item">
-                  <p class="txt">DRESS</p>
-                </li>
-                <li class="item">
-                  <p class="txt">BOTTOM</p>
-                </li>
-                <li class="item on">
-                  <p class="txt">ACC</p>
+                <li class="item" v-for="item2 of item.sub_nav" v-bind:key="item2.index">
+                  <p class="txt">{{item2.nav_name}}</p>
                 </li>
               </ul>
             </div>
-            <div class="categpry_banner_area">
-              <div class="banner_btn">
-                <div class="icon"></div>
-              </div>
+            <div class="categpry_banner_area" v-if="item.theme==1">
               <div class="banner_mask">
                 <ul class="list">
                   <li class="ban_item">
-                    <div class="left_img">
-
+                    <div class="left_img"  :style="{backgroundImage:'url('+item.gs_items[0]['img_path']+')'}">
                     </div>
                     <div class="right_img">
-                      <ul class="list top">
-                        <li class="item"></li>
-                        <li class="item"></li>
-                        <li class="item"></li>
-                      </ul>
                       <ul class="list">
-                        <li class="item"></li>
-                        <li class="item"></li>
-                        <li class="item"></li>
+                        <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" :style="{backgroundImage:'url('+gs_info['img_path']+')'}">
+                        </li>
                       </ul>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="banner_btn">
-                <div class="icon"></div>
-              </div>
-
             </div>
-          </div>
-        </div>
-        <div class="new_item_area">
-          <div class="inner_area">
-            <div class="tit_area">
-              <h2 class="tit">New Arrivals</h2>
-              <p class="sub">Lorem, ipsum dolor.</p>
-            </div>
-            <!-- items_list_three 1400기준으로 3분할 -->
-            <div class="items_list_three">
+            <div class="items_list_three" v-if="item.theme==2">
               <ul class="list">
-                <li class="item">
-                  <div class="img_area"></div>
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index">
+                  <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                   <div class="txt_area">
                     <ul class="list">
                       <li class="item">
-                        <p class="name">Lorem ipsum dolor sit amet.</p>
+                        <p class="name">{{gs_info['gs_name']}}</p>
                       </li>
                       <li class="item">
                         <div class="price_area">
-                          <p class="seller">5,000원</p>
-                          <p class="origin">5,000원</p>
-                          <p class="percent">7%</p>
+                          <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                          <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                          <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
                         </div>
                       </li>
                       <li class="item">
                         <div class="desc_area">
-                          <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eligendi rerum iste quos doloremque tempora officia perspiciatis voluptas, sunt atque ducimus libero illum a saepe neque nemo asperiores ea deleniti.</p>
+                          <p class="txt">{{gs_info['gs_short_txt']}}</p>
                         </div>
                       </li>
                       <li class="item">
@@ -153,74 +104,49 @@
                     </ul>
                   </div>
                 </li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div class="best_item_area">
-          <div class="inner_area">
-            <div class="tit_area">
-              <h2 class="tit">Best Product</h2>
-            </div>
-            <!-- items_list_three 1400기준으로 4분할 -->
-            <div class="items_list_four">
+            <div class="items_list_four" v-if="item.theme==3">
               <ul class="list">
                 <li class="item">
-                  <div class="img_area"></div>
-                  <div class="txt_area">
+                  <p class="name">{{gs_info['gs_name']}}</p>
+                </li>
+                <li class="item">
+                  <div class="price_area">
+                    <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                    <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                    <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="desc_area">
+                    <p class="txt">{{gs_info['gs_short_txt']}}</p>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="color_options_area">
                     <ul class="list">
-                      <li class="item">
-                        <p class="name">Lorem ipsum dolor sit amet.</p>
+                      <li class="item"></li>
+                      <li class="item"></li>
+                      <li class="item"></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="marks_area">
+                    <ul class="list">
+                      <li class="item one">
+                        <p class="txt">Lorem, ipsum dolor.</p>
                       </li>
-                      <li class="item">
-                        <div class="price_area">
-                          <p class="seller">5,000원</p>
-                          <p class="origin">5,000원</p>
-                          <p class="percent">7%</p>
-                        </div>
+                      <li class="item two">
+                        <p class="txt">ipsum</p>
                       </li>
-                      <li class="item">
-                        <div class="desc_area">
-                          <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eligendi rerum iste quos doloremque tempora officia perspiciatis voluptas, sunt atque ducimus libero illum a saepe neque nemo asperiores ea deleniti.</p>
-                        </div>
-                      </li>
-                      <li class="item">
-                        <div class="color_options_area">
-                          <ul class="list">
-                            <li class="item"></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="item">
-                        <div class="marks_area">
-                          <ul class="list">
-                            <li class="item one">
-                              <p class="txt">Lorem, ipsum dolor.</p>
-                            </li>
-                            <li class="item two">
-                              <p class="txt">ipsum</p>
-                            </li>
-                            <li class="item three">
-                              <p class="txt">dolor.</p>
-                            </li>
-                          </ul>
-                        </div>
+                      <li class="item three">
+                        <p class="txt">dolor.</p>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
               </ul>
             </div>
           </div>
@@ -543,11 +469,20 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+
 export default {
     name:"indexView",
     components:{
         Header,Footer
-    }
+    },
+    data() {
+      return {
+       
+      }
+    },
+    mounted() {
+      this.$store.dispatch('index_load');
+    },
 }
 </script>
 

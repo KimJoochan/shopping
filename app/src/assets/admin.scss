@@ -2,6 +2,51 @@
     width: 100%;
     height: auto;
     float: left;
+    .pagi_area_num{
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-top: 30px;
+        &>.pagi_list{
+            width: auto;
+            height: 30px;
+            float: left;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            &>.item{
+                width: 30px;
+                height: 30px;
+                float: left;
+                margin-right: 10px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                box-sizing: border-box;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.on{
+                    background-color: #ccc;
+                    &>.txt{
+                        color: #fff;
+                    }
+                }
+                &>.txt{
+                    width: auto;
+                    height: auto;
+                    float: left;
+                    font-size: 12px;
+                    line-height: 1;
+                    color: #333;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+    
+    }
     .side_menu{
         width: 255px;
         height: 100vh;
@@ -84,6 +129,7 @@
                                         float: left;
                                         font-size: 14px;
                                         line-height: 1.8;
+                                        cursor: pointer;
                                     }
                                 }
                             }
@@ -132,6 +178,220 @@
                     float: left;
                     line-height: 30px;
                     font-size: 20px;
+                }
+                &>.index_order_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 319.5px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.index_gs_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 319.5px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    text-align: center;
+                                    padding: 5px 0;
+                                    box-sizing: border-box;
+                                    &>.thumbnail{
+                                        width: 25px;
+                                        height: 25px;
+                                        float: left;
+                                        background-color: #333;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.index_user_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 319.5px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
                 }
                 &>.gs_register_area{
                     width: 100%;
@@ -219,9 +479,646 @@
                                                 height: 30px;
                                                 float: left;
                                             }
+                                            &>.btn{
+                                                width: 60px;
+                                                height: 20px;
+                                                background-color: #333;
+                                                color: #fff;
+                                                border: none;
+                                                &.red{
+                                                    background-color: rgb(206, 53, 53);
+                                                }
+
+                                            }
                                         }
                                     }
 
+                                }
+                                &>.select_tag{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>select{
+                                        width: 120px;
+                                        height: 30px;
+                                        float: left;
+                                    }
+                                }
+                                &>.input_box_radio_list{
+                                    width: 100%;
+                                    height: auto;
+                                    float: left;
+                                    &>.gs_area{
+                                        width: auto;
+                                        height: 30px;
+                                        float: left;
+                                        margin-right: 10px;
+                                        &>.label{
+                                            width: auto;
+                                            height: auto;
+                                            float: left;
+                                            line-height: 30px;
+                                            font-size: 14px;
+                                        }
+                                        &>.radio{
+                                            width: auto;
+                                            height: 30px;
+                                            float: left;
+                                        }
+                                    }
+                                }
+                            }
+                            &>.btn_area{
+                                width: 100%;
+                                height: auto;
+                                float: left;
+                                margin-top: 15px;
+                                padding: 0 10px;
+                                box-sizing: border-box;
+                                &>.btn{
+                                    width: 120px;
+                                    height: 30px;
+                                    float: left;
+                                    margin-right: 30px;
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                    &.delete{
+                                        &>button{
+                                            background-color: rgb(238, 88, 88);
+                                            color: #fff;
+                                        }
+                                    }
+                                    &>button{
+                                        width: 100%;
+                                        height: 30px;
+                                        float: left;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.goods_gs_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 294px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    text-align: center;
+                                    padding: 5px 0;
+                                    box-sizing: border-box;
+                                    &>.thumbnail{
+                                        width: 25px;
+                                        height: 25px;
+                                        float: left;
+                                        background-color: #333;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                    &>.btn{
+                                        width: 50px;
+                                        height: 25px;
+                                        background-color: #3c4b64;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.users_us_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 308.75px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    text-align: center;
+                                    &>.btn{
+                                        width: 50px;
+                                        height: 25px;
+                                        background-color: #3c4b64;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.banner_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 308.75px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    text-align: center;
+                                    padding: 5px 0;
+                                    box-sizing: border-box;
+                                    &>.thumbnail{
+                                        width: 25px;
+                                        height: 25px;
+                                        float: left;
+                                        background-color: #333;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                    &>.img_detail{
+                                        width: 90%;
+                                        min-height: 200px;
+                                        float: left;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        border: 1px solid #ccc;
+                                        box-sizing: border-box;
+                                        &>.txt{
+                                            width: 100%;
+                                            height: auto;
+                                            float: left;
+                                            text-align: center;
+                                            line-height: 200px;
+
+                                        }
+                                    }
+                                    &>.btn{
+                                        width: 50px;
+                                        height: 25px;
+                                        background-color: #3c4b64;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.order_od_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                            .col2{
+                                width: 319.5px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    text-align: center;
+                                    &>.btn{
+                                        width: 50px;
+                                        height: 25px;
+                                        background-color: #3c4b64;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                &>.category_cate_list_area{
+                    width: 100%;
+                    height: auto;
+                    min-height: 200px;
+                    float: left;
+                    margin-top: 15px;
+                    table{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-collapse: collapse;
+                        background-color: #fff;
+                        colgroup{
+                            .col1{
+                                width: 60px;
+                            }
+                        }
+                        tbody{
+                            tr{
+                                th{
+                                    background-color: #efefef;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                }
+                                td{
+                                    border: 1px solid #ccc;
+                                    text-align: center;
+                                    padding: 5px 0;
+                                    box-sizing: border-box;
+                                    &>.thumbnail{
+                                        width: 25px;
+                                        height: 25px;
+                                        float: left;
+                                        background-color: #333;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                    &>.btn{
+                                        width: 40px;
+                                        height: auto;
+                                        background-color: #3c4b64;
+                                        color: #fff;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                    &>.btn_up_down{
+                                        width: 25px;
+                                        height: 30px;
+                                        float: left;
+                                        position: relative;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        &>.btn{
+                                            width: 100%;
+                                            height: 13px;
+                                            float: left;
+                                            border: none;
+                                            background-color: #333;
+                                            color: #fff;
+                                            font-size: 10px;
+                                            margin-bottom: 4px;
+                                            cursor: pointer;
+                                            &:last-child{
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        margin-top: 10px;
+                        &>.list{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            &>.item{
+                                width: auto;
+                                height: auto;
+                                float: left;
+                                background-color: #333;
+                                margin-right: 10px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                &>.txt{
+                                    width: auto;
+                                    height: auto;
+                                    float: left;
+                                    line-height: 30px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    box-sizing: border-box;
+                                    cursor: pointer;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            &>.order_info_pop{
+                width: 100%;
+                height: 100%;
+                float: left;
+                position: fixed;
+                top: 0;
+                left: 0;
+                &>.back{
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0,0,0,0.5);
+                }
+                &>.order_info_pop_inner{
+                    width: 1000px;
+                    height: 400px;
+                    float: left;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index: 99;
+                    padding: 30px;
+                    box-sizing: border-box;
+                    &>.tit_area{
+                        width: 100%;
+                        height: auto;
+                        float: left;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 20px;
+                        box-sizing: border-box;
+                        position: relative;
+                        &>.close{
+                            width: 30px;
+                            height: 30px;
+                            float: left;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: #333;
+                            cursor: pointer;
+                        }
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            line-height: 30px;
+                            font-size: 20px;
+                        }
+                    }
+                    &>.tb_area{
+                        width: 100%;
+                        height: 300px;
+                        overflow-y: scroll;
+                        float: left;
+                        &>.tit{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            font-size: 14px;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                        }
+                        &>.order_status_arae{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            margin-top: 15px;
+                            &>.tit{
+                                width: 120px;
+                                height: auto;
+                                float: left;
+                                line-height: 30px;
+                                font-size: 14px;
+                            }
+                            &>.select{
+                                width: 120px;
+                                height: 30px;
+                                float: left;
+                                border: none;
+                            }
+                        }
+                        table{
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                            border-collapse: collapse;
+                            colgroup{
+                                .col1{
+                                    width: 120px;
+                                }
+                                .col2{
+                                    width: 840px;
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    height: 30px;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    td{
+                                        padding-left: 10px;
+                                        box-sizing: border-box;
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                    }
                                 }
                             }
                         }

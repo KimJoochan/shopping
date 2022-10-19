@@ -5,11 +5,11 @@
         <div class="nav_bar"></div>
         <div class="inner">
             <div class="section">
-                <h2 class="tit">상품 등록하기</h2>
+                <h2 class="tit">회원 추가하기</h2>
                 <div class="register_area">
                     <ul class="list">
                         <li class="item">
-                            <h2 class="txt">상품이름</h2>
+                            <h2 class="txt">아이디</h2>
                             <div class="input_area">
                                 <div class="input_box_full">
                                     <input type="text">
@@ -17,7 +17,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <h2 class="txt">상품가격</h2>
+                            <h2 class="txt">비밀번호</h2>
                             <div class="input_area">
                                 <div class="input_box_full">
                                     <input type="text">
@@ -25,7 +25,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <h2 class="txt">할인가격</h2>
+                            <h2 class="txt">이름</h2>
                             <div class="input_area">
                                 <div class="input_box_full">
                                     <input type="text">
@@ -33,7 +33,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <h2 class="txt">상품요약</h2>
+                            <h2 class="txt">전화번호</h2>
                             <div class="input_area">
                                 <div class="input_box_full">
                                     <input type="text">
@@ -41,35 +41,22 @@
                             </div>
                         </li>
                         <li class="item">
-                            <h2 class="txt">상품설명</h2>
+                            <h2 class="txt">이메일</h2>
                             <div class="input_area">
-                                <div class="input_box_textarea">
-                                    <textarea></textarea>
+                                <div class="input_box_full">
+                                    <input type="text">
                                 </div>
                             </div>
                         </li>
-                        <li class="item">
-                            <h2 class="txt">상품이미지</h2>
+                         <li class="item">
+                            <h2 class="txt">권한</h2>
                             <div class="input_area">
-                                <div class="input_box_files">
-                                    <ul class="list">
-                                        <li class="item">
-                                            <p class="txt main">메인이미지</p>
-                                            <input type="file">
-                                        </li>
-                                        <li class="item">
-                                            <p class="txt">서브이미지</p>
-                                            <input type="file">
-                                        </li>
-                                        <li class="item">
-                                            <p class="txt">서브이미지</p>
-                                            <input type="file">
-                                        </li>
-                                        <li class="item">
-                                            <p class="txt">서브이미지</p>
-                                            <input type="file">
-                                        </li>
-                                    </ul>
+                                <div class="select_tag">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
                                 </div>
                             </div>
                         </li>
@@ -82,7 +69,7 @@
                                     <button>초기화</button>
                                 </div>
                                 <div class="btn delete">
-                                    <button class="btn">삭제</button>
+                                    <button>삭제</button>
                                 </div>
                             </div>
                         </li>
