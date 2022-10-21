@@ -37,7 +37,7 @@
                             </li>
                             <li class="item">
                                 <div class="txt_area">
-                                    <p class="txt">CART</p>
+                                    <p class="txt" v-on:click="goto_cart()">CART</p>
                                 </div>
                             </li>
                             <li class="item">
@@ -148,7 +148,7 @@
                             <p class="txt">Login</p>
                         </li>
                         <li class="item">
-                            <p class="txt">Cart(0)</p>
+                            <p class="txt" v-on:click="goto_cart()">Cart(0)</p>
                         </li>
                         <li class="item">
                             <p class="txt">Order</p>
@@ -317,6 +317,9 @@ export default {
         },
         goto_index_page:function(){
             this.$router.push('/');
+        },
+        goto_cart:function(){
+            this.$router.push('/cart');
         }
     },
 }

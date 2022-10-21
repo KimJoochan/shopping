@@ -25,7 +25,7 @@
                         <div class="tb_top">
                             <ul class="list">
                                 <li class="item">
-                                    <p class="txt">일반상품(1)</p>
+                                    <p class="txt">일반상품({{cart_list.length}})</p>
                                 </li>
                             </ul>
                         </div>
@@ -76,7 +76,71 @@
                                             <p class="txt">선택</p>
                                         </td>
                                     </tr>
-                                    <tr class="tr_body">
+                                    <tr class="tr_body" v-for="item of cart_list" v-bind:key="item.index">
+                                        <td>
+                                            <input type="checkbox" class="chk" :valu="item.idx">
+                                        </td>
+                                        <td>
+                                            <div class="thumb" :style="{backgroundImage:'url('+item['img_path']+')'}"></div>
+                                        </td>
+                                        <td>
+                                            <p class="txt">{{item.gs_name}}</p>
+                                        </td>
+                                        <td>
+                                            <div class="count_area">
+                                                <div class="cnt_area">
+                                                    <div class="cnt_txt">
+                                                        <p class="txt">{{item.gs_cnt}}</p>
+                                                    </div>
+                                                    <div class="cnt_btn">
+                                                        <div class="btn_arr" v-on:click="chang_cnt('up',item)"></div>
+                                                        <div class="btn_arr" v-on:click="chang_cnt('down',item)"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="btn_area">
+                                                    <p class="txt">변경</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="cent_txt">{{item.gs_cnt*(item.gs_price - item.gs_sale)}}원</p>
+                                        </td>
+                                        <td>
+                                            <p class="cent_txt">-</p>
+                                        </td>
+                                        <td>
+                                            <p class="cent_txt">-</p>
+                                        </td>
+                                        <td>
+                                            <p class="cent_txt">Lorem</p>
+                                        </td>
+                                        <td>
+                                            <p class="cent_txt">Lorem원<br>조건</p>
+                                        </td>
+                                        <td>
+                                            <div class="btn_list_area">
+                                                <ul class="list">
+                                                    <li class="item on" v-on:click="order_item(item.idx)">
+                                                        <div class="txt_area">
+                                                            <p class="txt">주문하기</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item" v-on:click="wish_item(item.idx)">
+                                                        <div class="txt_area">
+                                                            <p class="txt">관심상품등록</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item" v-on:click="delete_item(item.idx)">
+                                                        <div class="txt_area">
+                                                            <div class="icon"></div>
+                                                            <p class="txt">삭제</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr_body" v-show="false">
                                         <td>
                                             <input type="checkbox" class="chk">
                                         </td>
@@ -185,13 +249,13 @@
                         <div class="tb_total_calc_area">
                             <ul class="list">
                                 <li class="item">
-                                    <p class="txt">5000원</p>
+                                    <p class="txt">{{gs_total_price}}원</p>
                                 </li>
                                 <li class="item">
-                                    <p class="txt">+5000원</p>
+                                    <p class="txt">-{{gs_sale_price}}원</p>
                                 </li>
                                 <li class="item2">
-                                    <p class="txt">=5000원</p>
+                                    <p class="txt">={{gs_seller_price}}원</p>
                                 </li>
                             </ul>
                         </div>
@@ -245,10 +309,10 @@
                             </div>
                             <div class="section">
                                 <div class="tb_top">
-                                    <p class="txt">일반상품(1)</p>    
+                                    <p class="txt">일반상품({{cart_list.length}})</p>    
                                 </div>
                                 <ul class="list">
-                                    <li class="item">
+                                    <li class="item" v-for="item of cart_list" v-bind:key="item.index">
                                         <table>
                                             <colgroup>
                                                 <col class="col1">
@@ -257,34 +321,34 @@
                                             <tbody>
                                                 <tr class="check">
                                                     <td>
-                                                        <input type="checkbox" class="check_input">
+                                                        <input type="checkbox" class="check_input" :value="item.idx">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="img_area">
+                                                        <div class="img_area" :style="{backgroundImage:'url('+item['img_path']+')'}">
 
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <h2 class="gs_name">Lorem, ipsum.</h2>
-                                                        <p class="gs_txt">Lorem, ipsum.</p>
-                                                        <p class="gs_txt">-</p>
-                                                        <p class="gs_txt">Lorem, ipsum.</p>
-                                                        <p class="gs_txt">Lorem, <b class="bold">ipsum</b>sdfsdfdsf.</p>
+                                                        <h2 class="gs_name">{{item.gs_name}}.</h2>
+                                                        <p class="gs_txt" v-show="false">{{item.gs_name}}.</p>
+                                                        <p class="gs_txt" v-show="false">-</p>
+                                                        <p class="gs_txt" v-show="false">Lorem, ipsum.</p>
+                                                        <p class="gs_txt" v-show="false">Lorem, <b class="bold">ipsum</b>sdfsdfdsf.</p>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td></td>
                                                     <td>
                                                         <div class="count_area">
-                                                            <div class="cnt_btn">
+                                                            <div class="cnt_btn" v-on:click="chang_cnt('down',item)">
                                                                 <p class="txt">-</p>
                                                             </div>
                                                             <div class="input_area">
-                                                                <p class="txt">2</p>
+                                                                <p class="txt">{{item.gs_cnt}}</p>
                                                             </div>
-                                                            <div class="cnt_btn">
+                                                            <div class="cnt_btn" v-on:click="chang_cnt('up',item)">
                                                                 <p class="txt">+</p>
                                                             </div>
                                                             <div class="adjust_btn">
@@ -299,14 +363,14 @@
                                     <li class="item">
                                         <div class="btn_area">
                                             <div class="left_side">
-                                                <div class="btn">
+                                                <div class="btn" v-on:click="delete_item(item.idx)">
                                                     <p class="txt">삭제</p>
                                                 </div>
-                                                <div class="btn">
+                                                <div class="btn" v-on:click="wish_item(item.idx)">
                                                     <p class="txt">관심상품</p>
                                                 </div>
                                             </div>
-                                            <div class="right_side">
+                                            <div class="right_side" v-on:click="order_item(item.idx)">
                                                  <div class="btn">
                                                     <p class="txt">주문하기</p>
                                                 </div>
@@ -339,15 +403,19 @@
                         <div class="total_price_area">
                             <div class="total_area">
                                 <h2 class="txt">결제예정금액</h2>
-                                <h2 class="price">12,500원</h2>
+                                <h2 class="price">{{gs_seller_price}}원</h2>
                             </div>
                             <div class="gs_price_area">
                                 <h2 class="txt">총 상품금액</h2>
-                                <h2 class="price">10,000원</h2>
+                                <h2 class="price">{{gs_total_price}}원</h2>
+                            </div>
+                            <div class="gs_price_area">
+                                <h2 class="txt">총 할인금액</h2>
+                                <h2 class="price">-{{gs_sale_price}}원</h2>
                             </div>
                             <div class="gs_price_area">
                                 <h2 class="txt">총 배송비</h2>
-                                <h2 class="price">2,500원</h2>
+                                <h2 class="price">-{{gs_sale_price}}원</h2>
                             </div>
                         </div>
                         <div class="btn_area">
@@ -369,13 +437,92 @@
   </div>
 </template>
 <script>
+import $ from 'jquery'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 export default {
     name:"CartView",
     components:{
         Header,Footer
-    }
+    },
+    data() {
+        return {
+            cart_list:{},
+            gs_total_price:0,
+            gs_seller_price:0,
+            gs_sale_price:0
+        }
+    },
+    methods: {
+        chang_cnt:function(method,item){
+            if(method=='up'){
+                item.gs_cnt++;
+            }else{
+                item.gs_cnt--;
+            }
+            var cart_list_arr=this.cart_list;
+            var gs_total_price=0;
+            var gs_seller_price=0;
+            var gs_sale_price=0;
+            for(var item2 of cart_list_arr){
+                gs_total_price+=item2['gs_cnt']*(item2['gs_price']);
+                gs_seller_price+=item2['gs_cnt']*(item2['gs_price']-item2['gs_sale']);
+                gs_sale_price+=item2['gs_cnt']*(item2['gs_sale']);
+            }
+            this.gs_total_price=gs_total_price;
+            this.gs_seller_price=gs_seller_price;
+            this.gs_sale_price=gs_sale_price;
+        },
+        my_cart_list:function(idx,user_idx){
+            var obj ={
+                idx:idx,
+                user_idx:user_idx
+            };
+            var change_cart_fun = this.change_cart_list;
+            $.ajax({
+                url : 'http://localhost/vue_shopping/api/my_cart_list',
+                data:obj,
+                type:"POST",
+                beforeSend:function(){
+                    $('#ajax_loding').show();
+                    $('body').addClass('noscroll');
+                },
+                success:function(res){
+                    var result = JSON.parse(res);
+                    change_cart_fun(result['data']['cart_list']);
+                },error:function(a,b,c){
+                    $('#ajax_loding').hide();
+                    $('body').removeClass('noscroll');
+                    console.log(a,b,c);
+                    alert('서버에서 오류 발생');
+                }
+            })
+        },
+        change_cart_list:function(obj){
+            this.cart_list=obj;
+            var gs_total_price=0;
+            var gs_seller_price=0;
+            var gs_sale_price=0;
+            for(var item2 of obj){
+                gs_total_price+=item2['gs_cnt']*(item2['gs_price']);
+                gs_seller_price+=item2['gs_cnt']*(item2['gs_price']-item2['gs_sale']);
+                gs_sale_price+=item2['gs_cnt']*(item2['gs_sale']);
+            }
+            this.gs_total_price=gs_total_price;
+            this.gs_seller_price=gs_seller_price;
+            this.gs_sale_price=gs_sale_price;
+        }
+    },
+    mounted() {
+        var my_cart_fun = this.my_cart_list;
+        $.ajax({
+            url:"https://api.ipify.org?format=json",
+            success:function(res){
+                var user_idx=0;
+                my_cart_fun(res['ip'],user_idx);
+            }
+        });
+    },
 }
 </script>
 <style lang="scss" scoped>

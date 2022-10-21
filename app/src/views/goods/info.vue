@@ -5,15 +5,22 @@
         <div class="gs_info">
             <div class="inner">
                 <div class="flow_area">
-                    <p class="txt">hmoe>news</p>
+                    <p class="txt">home>{{info_obj.info['gs_name']}}</p>
                 </div>
                 <div class="info_area">
                     <div class="img_area">
-
+                        <div class="swiper pc_gsInfo_swiper" v-show="info_obj.img_list.length>0">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="item of info_obj.img_list" v-bind:key="item.index" :style="{backgroundImage:'url('+item+')'}"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="banner_empty" v-show="info_obj.img_list.length==0"><p class="txt">이미지가 없음</p></div>
                     </div>
                     <div class="info_txt_area">
                         <div class="gs_name_area">
-                            <p class="tit">Lorem, ipsum dolor.</p>
+                            <p class="tit">{{info_obj.info['gs_name']}}</p>
                         </div>
                         <div class="gs_tb_area">
                             <table class="gs_tb">
@@ -27,7 +34,7 @@
                                             <p class="txt">판매가</p>
                                         </td>
                                         <td class="col2">
-                                            <p class="line_txt">5,000원</p>
+                                            <p class="line_txt" v-show="info_obj.info['gs_price']>0">{{info_obj.info['gs_price']}}원</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -35,11 +42,11 @@
                                             <p class="txt">할인판매가</p>
                                         </td>
                                         <td class="col2">
-                                            <p class="sale_price">4,650원</p>
-                                            <p class="sale_txt">(350원 할인)</p>
+                                            <p class="sale_price">{{info_obj.info['gs_price'] - info_obj.info['gs_sale']}}원</p>
+                                            <p class="sale_txt" v-show="info_obj.info['gs_sale']>0">({{info_obj.info['gs_sale']}}원 할인)</p>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr v-if="false">
                                         <td class="col1">
                                             <p class="txt">할인기간</p>
                                         </td>
@@ -53,26 +60,26 @@
                         </div>
                         <div class="gs_cnt_controll_area">
                             <div class="name_area">
-                                <p class="txt">Lorem, ipsum dolor.</p>
+                                <p class="txt">{{info_obj.info['gs_name']}}</p>
                             </div>
                             <div class="count_area">
                                 <div class="cnt">
-                                    <p class="txt">1</p>
+                                    <p class="txt">{{gs_cnt}}</p>
                                 </div>
                                 <div class="btn_area">
-                                    <div class="up btn"></div>
-                                    <div class="down btn"></div>
+                                    <div class="up btn" v-on:click="gs_cnt_change('up')"></div>
+                                    <div class="down btn" v-on:click="gs_cnt_change('down')"></div>
                                 </div>
                             </div>
                             <div class="price_area">
-                                <p class="txt">Lorem ipsum dolor sit amet.</p>
+                                <p class="txt">{{info_obj.info['gs_price'] - info_obj.info['gs_sale']}}원</p>
                             </div>
                         </div>
                         <div class="total_price_area">
                             <div class="txt_area">
                                 <p class="txt">총 상품금역(수량):</p>
-                                <p class="price">4,650원</p>
-                                <p class="txt">1개</p>
+                                <p class="price">{{gs_cnt * (info_obj.info['gs_price'] - info_obj.info['gs_sale'])}}원</p>
+                                <p class="txt">{{gs_cnt}}개</p>
                             </div>
                         </div>
                         <div class="btn_list_area">
@@ -81,7 +88,7 @@
 
                                 </div>
                             </div>
-                            <div class="btn cart_btn">
+                            <div class="btn cart_btn" v-on:click="insert_cart()">
                                 <p class="txt">CART</p>
                             </div>
                             <div class="btn buy_btn">
@@ -90,7 +97,7 @@
                         </div>
                         <div class="gs_comment_area">
                             <p class="tit">comment</p>
-                            <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae sit voluptates, possimus qui enim iure fugit, dolor esse iste natus ut sint explicabo error? Iste officia ipsum aliquam quos. Praesentium!</p>
+                            <p class="txt">{{info_obj.info['gs_short_txt']}}</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +123,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="desc_area">
+            <div class="desc_area" v-html="info_obj.info['gs_explain']">
 
             </div>
         </div>
@@ -342,22 +349,20 @@
         <div class="gs_info">
             <div class="img_area">
                 <div class="thumbnail_area">
-
-                </div>
-                <div class="img_pagi">
-                    <div class="inner_center">
-                        <ul class="list">
-                            <li class="item"></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                        </ul>
+                    <div class="swiper mb_gsInfo_swiper" v-show="info_obj.img_list.length>0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="item of info_obj.img_list" v-bind:key="item.index" :style="{backgroundImage:'url('+item+')'}"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
+                    <div class="banner_empty" v-show="info_obj.img_list.length==0"><p class="txt">이미지가 없음</p></div>
                 </div>
             </div>
             <div class="info_area">
                 <div class="gs_name_area">
                     <div class="gs_name_inner">
-                        <h2 class="gs_txt">Lorem</h2>
+                        <h2 class="gs_txt">{{info_obj.info['gs_name']}}</h2>
                         <div class="mark">
                             <ul class="list">
                                 <li class="item one">
@@ -380,18 +385,10 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <p class="txt">소비자가</p>
-                                    </td>
-                                    <td>
-                                        <p class="txt line">1,000원</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <p class="txt">판매가</p>
                                     </td>
                                     <td>
-                                        <p class="txt line">1,000원</p>
+                                        <p class="txt line" v-show="info_obj.info['gs_price']>0">{{info_obj.info['gs_price']}}원원</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -399,26 +396,17 @@
                                         <p class="txt">할인판매가</p>
                                     </td>
                                     <td>
-                                        <p class="txt">1,000원</p>
-                                        <p class="sale_txt">(700원 할인)</p>
+                                        <p class="txt">{{info_obj.info['gs_price'] - info_obj.info['gs_sale']}}원</p>
+                                        <p class="sale_txt" v-show="info_obj.info['gs_sale']>0">({{info_obj.info['gs_sale']}}원 할인)</p>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr v-show="false">
                                     <td>
                                         <p class="txt">할인기간</p>
                                     </td>
                                     <td>
                                         <p class="txt_during">남은시간 1504일 12:04:25(700원 할인)</p>
                                         <p class="txt">2021-10-05 00:00 ~ 2026-10-31 23:55</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="txt">할인금액</p>
-                                    </td>
-                                    <td>
-                                        <p class="txt_line">총 할인금액 700원</p>
-                                        <p class="txt_line">(모바일할인금액 700원)</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -435,6 +423,22 @@
                                         </div>
                                     </td>
                                 </tr>
+                                 <tr>
+                                    <td>
+                                        <p class="txt">개수</p>
+                                    </td>
+                                    <td>
+                                        <div class="count_area">
+                                            <div class="cnt">
+                                                <p class="txt">{{gs_cnt}}</p>
+                                            </div>
+                                            <div class="btn_area">
+                                                <div class="up btn" v-on:click="gs_cnt_change('up')"></div>
+                                                <div class="down btn" v-on:click="gs_cnt_change('down')"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -442,7 +446,7 @@
                 <div class="total_price_area">
                     <div class="inner_center">
                         <p class="txt">총상품금액(수량):</p>
-                        <h2 class="price">0</h2>
+                        <h2 class="price">{{gs_cnt * (info_obj.info['gs_price'] - info_obj.info['gs_sale'])}}</h2>
                         <p class="txt">원</p>
                     </div>
                 </div>
@@ -451,7 +455,7 @@
                         <li class="item wish">
                             <div class="icon"></div>
                         </li>
-                        <li class="item cart">
+                        <li class="item cart" v-on:click="insert_cart()">
                             <p class="txt">Cart</p>
                         </li>
                         <li class="item buy">
@@ -464,13 +468,7 @@
                     <h2 class="tit">Comment</h2>
                     <ul class="list">
                         <li class="item">
-                            <p class="txt">Lorem, ipsum dolor.</p>
-                        </li>
-                        <li class="item">
-                            <p class="txt">Lorem, ipsum dolor.</p>
-                        </li>
-                        <li class="item">
-                            <p class="txt">Lorem, ipsum dolor.</p>
+                            <p class="txt">{{info_obj.info['gs_short_txt']}}.</p>
                         </li>
                     </ul>
                 </div>
@@ -496,7 +494,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="desc_area">
+            <div class="desc_area" v-html="info_obj.info['gs_explain']">
 
             </div>
         </div>
@@ -715,7 +713,7 @@
                     </div>
                 </div>
             </div>
-          
+    
         </div>
     </div>
     <Footer/>
@@ -724,11 +722,100 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import $ from 'jquery';
 export default {
     name:"ListView",
     components:{
         Header,Footer
-    }
+    },
+    data() {
+        return {
+            info_obj:{
+                info:"",
+                img_list:[],
+            },
+            gs_cnt:1
+        }
+    },
+    methods: {
+        change_info_obj:function(obj){
+            this.info_obj=obj;
+        },
+        gs_cnt_change:function(txt){
+            if(txt=='up'){
+                this.gs_cnt++;
+            }else if(txt=='down'){
+                if(this.gs_cnt>1){
+                    this.gs_cnt--;
+                }
+            }
+        },
+        ajax_insert_cart:function(obj){
+            $.ajax({
+                url : 'http://localhost/vue_shopping/api/insert_cart',
+                data:obj,
+                type:"POST",
+                beforeSend:function(){
+                    $('#ajax_loding').show();
+                    $('body').addClass('noscroll');
+                },
+                success:function(res){
+                    console.log(res);
+                    var result = JSON.parse(res);
+                    alert(result['msg']);
+                },error:function(a,b,c){
+                    $('#ajax_loding').hide();
+                    $('body').removeClass('noscroll');
+                    console.log(a,b,c);
+                    alert('서버에서 오류 발생');
+                }
+            })
+        },
+        insert_cart:function(){
+            var gs_count = this.gs_cnt;
+            var gs_idx = this.info_obj.info['idx'];
+            var ajax_insert_fun = this.ajax_insert_cart;
+            $.ajax({
+                url:"https://api.ipify.org?format=json",
+                success:function(res){
+                    var obj ={
+                        gs_idx:gs_idx,
+                        cnt : gs_count,
+                        non_user:res['ip'],
+                        user_idx:""
+                    };
+                    ajax_insert_fun(obj);
+                }
+            });
+          
+        }
+    },
+    mounted() {
+        this.idx=this.$route.query.idx;
+        var change_info_fun = this.change_info_obj;
+        let obj = {
+            idx:this.idx
+        };
+        $.ajax({
+            url : 'http://localhost/vue_shopping/api/gs_info_by_idx',
+            data:obj,
+            type:"POST",
+            beforeSend:function(){
+                $('#ajax_loding').show();
+                $('body').addClass('noscroll');
+            },
+            success:function(res){
+                var result = JSON.parse(res);
+                change_info_fun(result['data']);
+                console.log(result['data']);
+            },error:function(a,b,c){
+                $('#ajax_loding').hide();
+                $('body').removeClass('noscroll');
+                console.log(a,b,c);
+                alert('서버에서 오류 발생');
+            }
+        })
+    },
 }
 </script>
 <style lang="scss" scoped>

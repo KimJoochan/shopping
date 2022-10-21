@@ -6,30 +6,23 @@
         <div class="section_area">
           <div class="inner_area">
             <div class="tit_area">
-              <h2 class="tit">블라우스</h2>
+              <h2 class="tit">{{nav_obj.nav_name}}</h2>
+            </div>
+            <div class="gs_content" v-if="nav_obj.contents!=''"  v-html="nav_obj.contents">
             </div>
             <div class="segment_area">
               <ul class="list">
-                <li class="item">
-                  <p class="txt">OUTER</p>
+                <li class="item" v-on:click="choice_segment_mb(0,$event)">
+                  <p class="txt">all</p>
                 </li>
-                <li class="item">
-                  <p class="txt">TOP</p>
-                </li>
-                <li class="item">
-                  <p class="txt">DRESS</p>
-                </li>
-                <li class="item">
-                  <p class="txt">BOTTOM</p>
-                </li>
-                <li class="item on">
-                  <p class="txt">ACC</p>
+                <li class="item" v-for="(item2,index) of nav_obj.sub_nav" v-bind:key="index" v-on:click="choice_segment_mb((index+1),$event)">
+                  <p class="txt">{{item2.nav_name}}</p>
                 </li>
               </ul>
             </div>
             <div class="item_align_area">
               <div class="total_area">
-                <p class="txt">Total 4 Items</p>
+                <p class="txt">Total {{nav_obj.gs_items.length}} Items</p>
               </div>
               <div class="alignment">
                 <ul class="list">
@@ -54,25 +47,26 @@
                 </ul>
               </div>
             </div>
+           
             <div class="items_list_three">
               <ul class="list">
-                <li class="item">
-                  <div class="img_area"></div>
+                <li class="item" v-for="gs_info of nav_obj.gs_items" v-bind:key="gs_info.index"  v-on:click="read_gs(gs_info['idx'])">
+                  <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                   <div class="txt_area">
                     <ul class="list">
                       <li class="item">
-                        <p class="name">Lorem ipsum dolor sit amet.</p>
+                        <p class="name">{{gs_info['gs_name']}}</p>
                       </li>
                       <li class="item">
                         <div class="price_area">
-                          <p class="seller">5,000원</p>
-                          <p class="origin">5,000원</p>
-                          <p class="percent">7%</p>
+                          <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                          <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                          <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
                         </div>
                       </li>
                       <li class="item">
                         <div class="desc_area">
-                          <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eligendi rerum iste quos doloremque tempora officia perspiciatis voluptas, sunt atque ducimus libero illum a saepe neque nemo asperiores ea deleniti.</p>
+                          <p class="txt">{{gs_info['gs_short_txt']}}</p>
                         </div>
                       </li>
                       <li class="item">
@@ -102,11 +96,54 @@
                     </ul>
                   </div>
                 </li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
+              </ul>
+              <ul class="list" v-show="false" v-for="item of nav_obj.sub_nav" v-bind:key="item.key">
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                  <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
+                  <div class="txt_area">
+                    <ul class="list">
+                      <li class="item">
+                        <p class="name">{{gs_info['gs_name']}}</p>
+                      </li>
+                      <li class="item">
+                        <div class="price_area">
+                          <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                          <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                          <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="desc_area">
+                          <p class="txt">{{gs_info['gs_short_txt']}}</p>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="color_options_area">
+                          <ul class="list">
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="marks_area">
+                          <ul class="list">
+                            <li class="item one">
+                              <p class="txt">Lorem, ipsum dolor.</p>
+                            </li>
+                            <li class="item two">
+                              <p class="txt">ipsum</p>
+                            </li>
+                            <li class="item three">
+                              <p class="txt">dolor.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="pagi_area_num">
@@ -129,24 +166,19 @@
     <div class="mb">
       <div class="section">
           <div class="tit_area">
-            <h2 class="tit">BOTTOM</h2>
+            <h2 class="tit">{{nav_obj.nav_name}}</h2>
           </div>
+          <div class="gs_content" v-if="nav_obj.contents!=''"  v-html="nav_obj.contents">
+            </div>
           <div class="segment_area">
             <div class="inner">
               <ul class="list">
-                <li class="item on">
-                  <p class="txt">OUITER</p>
+                <li class="item" v-on:click="choice_segment_mb(0,$event)">
+                  <p class="txt">all</p>
                 </li>
-                <li class="item">
-                  <p class="txt">OUITER</p>
+                <li class="item" v-for="(item2,index) of nav_obj.sub_nav" v-bind:key="index" v-on:click="choice_segment_mb((index+1),$event)">
+                  <p class="txt">{{item2.nav_name}}</p>
                 </li>
-                <li class="item">
-                  <p class="txt">OUITER</p>
-                </li>
-                <li class="item">
-                  <p class="txt">ACC</p>
-                </li>
-
               </ul>
             </div>
           </div>
@@ -163,19 +195,17 @@
           </div>
           <div class="list_items">
             <ul class="list">
-              <li class="item">
-                <div class="img_area">
-
-                </div>
+              <li class="item" v-for="gs_info of nav_obj.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                 <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
+                  <p class="gs_name">{{gs_info['gs_name']}}</p>
                   <div class="price_area">
-                    <p class="sell">9,300원</p>
-                    <p class="sale">10,300원</p>
-                    <p class="percent">7%</p>
+                    <p class="sell">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                    <p class="sale"  v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                    <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
                   </div>
                   <div class="desc_area">
-                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
+                    <p class="txt">{{gs_info['gs_short_txt']}}</p>
                   </div>
                   <div class="option_area">
                     <ul class="list">
@@ -199,19 +229,19 @@
                   </div>
                 </div>
               </li>
-              <li class="item">
-                <div class="img_area">
-
-                </div>
+            </ul>
+            <ul class="list" v-show="false" v-for="item of nav_obj.sub_nav" v-bind:key="item.key">
+              <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                 <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
+                  <p class="gs_name">{{gs_info['gs_name']}}</p>
                   <div class="price_area">
-                    <p class="sell">9,300원</p>
-                    <p class="sale">10,300원</p>
-                    <p class="percent">7%</p>
+                    <p class="sell">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                    <p class="sale"  v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                    <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
                   </div>
                   <div class="desc_area">
-                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
+                    <p class="txt">{{gs_info['gs_short_txt']}}</p>
                   </div>
                   <div class="option_area">
                     <ul class="list">
@@ -220,56 +250,18 @@
                       <li class="item three"></li>
                     </ul>
                   </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="img_area">
-
-                </div>
-                <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
-                  <div class="price_area">
-                    <p class="sell">9,300원</p>
-                    <p class="sale">10,300원</p>
-                    <p class="percent">7%</p>
-                  </div>
-                  <div class="desc_area">
-                    <p class="txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum recusandae dignissimos, totam molestias, necessitatibus deleniti nulla atque explicabo suscipit possimus, id magnam minima accusamus ea ex ducimus sequi earum eos.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="img_area">
-
-                </div>
-                <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
-                  <div class="price_area">
-                    <p class="sell">9,300원</p>
-                    <p class="sale">10,300원</p>
-                    <p class="percent">7%</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="img_area">
-
-                </div>
-                <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
-                  <div class="price_area">
-                    <p class="sell">9,300원</p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="img_area">
-
-                </div>
-                <div class="txt_area">
-                  <p class="gs_name">Lorem</p>
-                  <div class="price_area">
-                    <p class="sell">9,300원</p>
+                  <div class="mark_list">
+                    <ul class="list">
+                      <li class="item one">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item two">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item three">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </li>
@@ -299,10 +291,71 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import $ from 'jquery';
 export default {
     name:"ListView",
+    data() {
+      return {
+        idx:0,
+        nav_obj:{
+          gs_items:[]
+        }
+      }
+    },
+    methods: {
+      change_nav_obj:function(obj){
+        this.nav_obj=obj;
+      },
+      choice_segment:function(idx,e){
+        var that = $(e.currentTarget);
+        that.parent('.list').find('.item').removeClass('on');
+        that.addClass('on');
+        var num = idx;
+        var ban_item = that.parents('.inner_area').find('.items_list_three>.list');
+        ban_item.hide();
+        ban_item.eq(num).fadeIn(250);
+      },
+      choice_segment_mb:function(idx,e){
+        var that = $(e.currentTarget);
+        that.parent('.list').find('.item').removeClass('on');
+        that.addClass('on');
+        var num = idx;
+        var ban_item = that.parents('.section').find('.list_items>.list');
+        ban_item.hide();
+        ban_item.eq(num).fadeIn(250);
+      },
+      read_gs:function(idx){
+        this.$router.push('/info?idx='+idx);
+      }
+    },
     components:{
         Header,Footer
+    },
+    mounted(){
+      this.idx=this.$route.query.idx;
+      var change_nav_fun = this.change_nav_obj;
+      let obj = {
+        idx:this.idx
+      };
+      $.ajax({
+        url : 'http://localhost/vue_shopping/api/gs_list_by_idx',
+        data:obj,
+        type:"POST",
+        beforeSend:function(){
+            $('#ajax_loding').show();
+            $('body').addClass('noscroll');
+        },
+        success:function(res){
+          var result = JSON.parse(res);
+          change_nav_fun(result['data']['nav_obj'])
+          console.log(result);
+        },error:function(a,b,c){
+            $('#ajax_loding').hide();
+            $('body').removeClass('noscroll');
+            console.log(a,b,c);
+            alert('서버에서 오류 발생');
+        }
+      })
     }
 }
 </script>

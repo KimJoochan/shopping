@@ -35,16 +35,19 @@
             </div>
             <div class="segment_area" v-if="item.sub_nav.length>1">
               <ul class="list">
-                <li class="item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-on:click="choice_segment(index,$event)">
+                <li class="item" v-on:click="choice_segment(0,$event)">
+                  <p class="txt">all</p>
+                </li>
+                <li class="item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-on:click="choice_segment((index+1),$event)">
                   <p class="txt">{{item2.nav_name}}</p>
                 </li>
               </ul>
             </div>
-            <div class="categpry_banner_area" v-if="item.theme==1">
+            <div class="categpry_banner_area list_theme_area" v-if="item.theme==1">
               <div class="banner_mask">
                 <ul class="list">
-                  <li class="ban_item">
-                    <div class="left_img"  :style="{backgroundImage:'url('+item.gs_items[0]['img_path']+')'}">
+                  <li class="item_list_area ban_item">
+                    <div class="left_img"  :style="{backgroundImage:'url('+item.gs_items[0]['img_path']+')'}" v-on:click="read_gs(item.gs_items[0]['idx'])">
                     </div>
                     <div class="right_img">
                       <ul class="list">
@@ -53,12 +56,12 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="ban_item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-show="false">
+                  <li class="item_list_area ban_item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-show="false">
                     <div class="left_img"  :style="{backgroundImage:'url('+item2.gs_items[0]['img_path']+')'}">
                     </div>
                     <div class="right_img">
                       <ul class="list">
-                        <li class="item" v-for="gs_info2 of item2.gs_items" v-bind:key="gs_info2.index" :style="{backgroundImage:'url('+gs_info2['img_path']+')'}">
+                        <li class="item" v-for="gs_info2 of item2.gs_items" v-bind:key="gs_info2.index" :style="{backgroundImage:'url('+gs_info2['img_path']+')'}"  v-on:click="read_gs(gs_info2['idx'])">
                         </li>
                       </ul>
                     </div>
@@ -66,9 +69,57 @@
                 </ul>
               </div>
             </div>
-            <div class="items_list_three" v-if="item.theme==2">
-              <ul class="list">
-                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index">
+            <div class="items_list_three list_theme_area" v-if="item.theme==2">
+              <ul class="item_list_area list">
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                  <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
+                  <div class="txt_area">
+                    <ul class="list">
+                      <li class="item">
+                        <p class="name">{{gs_info['gs_name']}}</p>
+                      </li>
+                      <li class="item">
+                        <div class="price_area">
+                          <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                          <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                          <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="desc_area">
+                          <p class="txt">{{gs_info['gs_short_txt']}}</p>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="color_options_area">
+                          <ul class="list">
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="marks_area">
+                          <ul class="list">
+                            <li class="item one">
+                              <p class="txt">Lorem, ipsum dolor.</p>
+                            </li>
+                            <li class="item two">
+                              <p class="txt">ipsum</p>
+                            </li>
+                            <li class="item three">
+                              <p class="txt">dolor.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="item_list_area list" v-show="false" v-for="item of item.sub_nav" v-bind:key="item.key">
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
                   <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                   <div class="txt_area">
                     <ul class="list">
@@ -116,9 +167,9 @@
                 </li>
               </ul>
             </div>
-            <div class="items_list_four" v-if="item.theme==3">
-              <ul class="list">
-                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index">
+            <div class="items_list_four list_theme_area" v-if="item.theme==3">
+              <ul class="item_list_area list">
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
                   <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                   <div class="txt_area">
                     <ul class="list">
@@ -162,6 +213,54 @@
                         </div>
                       </li>
                     </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="item_list_area list" v-show="false" v-for="item of item.sub_nav" v-bind:key="item.key">
+                <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                  <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
+                  <div class="txt_area">
+                      <ul class="list">
+                        <li class="item">
+                          <p class="name">{{gs_info['gs_name']}}</p>
+                        </li>
+                        <li class="item">
+                          <div class="price_area">
+                            <p class="seller">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                            <p class="origin" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                            <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
+                          </div>
+                        </li>
+                        <li class="item">
+                          <div class="desc_area">
+                            <p class="txt">{{gs_info['gs_short_txt']}}</p>
+                          </div>
+                        </li>
+                        <li class="item">
+                          <div class="color_options_area">
+                            <ul class="list">
+                              <li class="item"></li>
+                              <li class="item"></li>
+                              <li class="item"></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="item">
+                          <div class="marks_area">
+                            <ul class="list">
+                              <li class="item one">
+                                <p class="txt">Lorem, ipsum dolor.</p>
+                              </li>
+                              <li class="item two">
+                                <p class="txt">ipsum</p>
+                              </li>
+                              <li class="item three">
+                                <p class="txt">dolor.</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
                   </div>
                 </li>
               </ul>
@@ -202,15 +301,18 @@
           <div class="segment_area" v-if="item.sub_nav.length>1">
             <div class="inner">
               <ul class="list">
-                <li class="item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-on:click="choice_segment(index,$event)">
+                <li class="item" v-on:click="choice_segment_mb(0,$event)">
+                  <p class="txt">all</p>
+                </li>
+                <li class="item" v-for="(item2,index) of item.sub_nav" v-bind:key="index" v-on:click="choice_segment_mb((index+1),$event)">
                   <p class="txt">{{item2.nav_name}}</p>
                 </li>
               </ul>
             </div>
           </div>
-          <div :class="[item.theme==1?'categroy_items':'list_items']">
+          <div class="mb_list_items_area" :class="[item.theme==1?'categroy_items':'list_items']">
             <ul class="list">
-              <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index">
+              <li class="item" v-for="gs_info of item.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
                 <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
                 <div class="txt_area" v-show="item.theme!=1">
                   <p class="gs_name">{{gs_info['gs_name']}}</p>
@@ -245,6 +347,42 @@
                 </div>
               </li>
             </ul>
+            <ul class="list" v-show="false" v-for="item2 of item.sub_nav" v-bind:key="item2.key">
+              <li class="item" v-for="gs_info of item2.gs_items" v-bind:key="gs_info.index" v-on:click="read_gs(gs_info['idx'])">
+                <div class="img_area" :style="{backgroundImage:'url('+gs_info['img_path']+')'}"></div>
+                <div class="txt_area" v-if="item.theme!=1">
+                  <p class="gs_name">{{gs_info['gs_name']}}</p>
+                  <div class="price_area">
+                    <p class="sell">{{gs_info['gs_price'] - gs_info['gs_sale'] }}원</p>
+                    <p class="sale" v-show="gs_info['gs_price']>0">{{gs_info['gs_price']}}원</p>
+                    <p class="percent" v-show="gs_info['gs_price']>0 && gs_info['gs_sale']>0">{{gs_info['gs_price']/gs_info['gs_sale']}}%</p>
+                  </div>
+                  <div class="desc_area">
+                    <p class="txt">{{gs_info['gs_short_txt']}}</p>
+                  </div>
+                  <div class="option_area">
+                    <ul class="list">
+                      <li class="item one"></li>
+                      <li class="item two"></li>
+                      <li class="item three"></li>
+                    </ul>
+                  </div>
+                  <div class="mark_list">
+                    <ul class="list">
+                      <li class="item one">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item two">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                      <li class="item three">
+                        <p class="txt">Lorem, ipsum dolor.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              </ul>
             <div class="more_view_area" v-show="item.theme!=1">
               <p class="txt">MORE VIEW</p>
             </div>
@@ -271,11 +409,24 @@ export default {
         var that = $(e.currentTarget);
         that.parent('.list').find('.item').removeClass('on');
         that.addClass('on');
-        var num = idx+1;
-        var ban_item = that.parents('.inner_area').find('.banner_mask>.list>.ban_item');
+        var num = idx;
+        var ban_item = that.parents('.inner_area').find('.list_theme_area .item_list_area');
         ban_item.hide();
         ban_item.eq(num).fadeIn(250);
+      },
+      choice_segment_mb:function(idx,e){
+        var that = $(e.currentTarget);
+        that.parent('.list').find('.item').removeClass('on');
+        that.addClass('on');
+        var num = idx;
+        var mb_list_items_area = that.parents('.section').find('.mb_list_items_area>.list');
+        mb_list_items_area.hide();
+        mb_list_items_area.eq(num).fadeIn(250);
+      },
+      read_gs:function(idx){
+        this.$router.push('/info?idx='+idx);
       }
+      
     },
     data() {
       return {

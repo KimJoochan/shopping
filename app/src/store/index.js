@@ -49,7 +49,6 @@ export default new Vuex.Store({
 
       state.index_page_data.display_nav_list=value['display_nav_list'];
       
-
     }
   },
   actions: {

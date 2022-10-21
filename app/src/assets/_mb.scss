@@ -18,12 +18,13 @@
             width: 100%;
             height: 40px;
             float: left;
-            background-color: antiquewhite;
+            background-color: #f7f2f2;
+            padding: 0;
             &>.icon_area{
                 width: 40px;
                 height: 40px;
                 float: left;
-                background-color: #fff;
+                background-color: #ccc;
             }
             &>.recent_search{
                 width: 165px;
@@ -92,7 +93,6 @@
             width: 100%;
             height: 60px;
             float: left;
-            background-color: #333;
             &>.inner{
                 width: 100%;
                 height: 20px;
@@ -1110,7 +1110,6 @@
                     float: left;
                     font-size: 16px;
                     text-align: center;
-                    line-height: 1;
                 }
                 &>.txt{
                     width: 100%;
@@ -1118,10 +1117,22 @@
                     float: left;
                     font-size: 14px;
                     text-align: center;
-                    line-height: 1;
                     margin-top: 5px;
                 }
 
+            }
+            &>.gs_content{
+                width: 98%;
+                height: auto;
+                float: left;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #eee;
+                box-sizing: border-box;
+                margin-top: 10px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
             }
             &>.segment_area{
                 width: 100%;
@@ -1408,37 +1419,51 @@
                     width: 100%;
                     height: 720px;
                     float: left;
-                    background-color: pink;
-                }
-                &>.img_pagi{
-                    width: 100%;
-                    height: 30px;
-                    float: left;
-                    position: absolute;
-                    bottom: 30px;
-                    left: 0;
-                    &>.inner_center{
-                        width: auto;
-                        height: 30px;
+                    .swiper {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;        
+                        /* Center slide text vertically */
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        -webkit-align-items: center;
+                        align-items: center;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .swiper-slide img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &>.banner_empty{
+                        width: 100%;
+                        height: 100%;
                         float: left;
-                        position: relative;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        &>.list{
-                            width: auto;
+                        &>.txt{
+                            width: 100%;
                             height: auto;
                             float: left;
-                            &>.item{
-                                width: 30px;
-                                height: 30px;
-                                float: left;
-                                margin-right: 10px;
-                                background-color: #333;
-                                &:last-child{
-                                    margin-right: 0;
-                                }
-                            }
+                            text-align: center;
+                            position: relative;
+                            top: 50%;
+                            font-size: 20px;
+                            transform: translateY(-50%);
                         }
+        
                     }
                 }
             }
@@ -1448,7 +1473,7 @@
                 float: left;
                 padding: 20px;
                 box-sizing: border-box;
-                background-color: rgb(237, 230, 218);
+                background-color: #f7f7f7;
                 &>.gs_name_area{
                     width: 100%;
                     height: 40px;
@@ -1585,6 +1610,69 @@
                                                     margin-right: 10px;
                                                     &:last-child{
                                                         margin-right: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &>.count_area{
+                                            width: 55px;
+                                            height: 25px;
+                                            float: left;
+                                            &>.cnt{
+                                                width: 35px;
+                                                height: 25px;
+                                                float: left;
+                                                position: relative;
+                                                &::after{
+                                                    content: "";
+                                                    clear: both;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    float: left;
+                                                    border: 1px solid #ccc;
+                                                    box-sizing: border-box;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                }
+                                                &>.txt{
+                                                    width: 100%;
+                                                    height: auto;
+                                                    float: left;
+                                                    line-height: 25px;
+                                                    font-size: 12px;
+                                                    padding-left: 5px;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+                                            &>.btn_area{
+                                                width: 20px;
+                                                height: 25px;
+                                                float: left;
+                                                &>.btn{
+                                                    width: 100%;
+                                                    height: 12.5px;
+                                                    float: left;
+                                                    position: relative;
+                                                    &::after{
+                                                        content: "";
+                                                        clear: both;
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        float: left;
+                                                        border: 1px solid #ccc;
+                                                        box-sizing: border-box;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: 0;
+                                                    }
+                                                    &.up{
+            
+                                                    }
+                                                    &.down{
+            
                                                     }
                                                 }
                                             }
@@ -1765,13 +1853,15 @@
                 &>.desc_area{
                     width: 530px;
                     height: auto;
-                    min-height: 1300px;
+                    min-height: 500px;
                     margin-top: 60px;
                     float: left;
                     position: relative;
                     left: 50%;
                     transform: translateX(-50%);
                     background-color: #efefef;
+                    padding: 10px;
+                    box-sizing: border-box;
                 }
             }
             &.guide_area{
